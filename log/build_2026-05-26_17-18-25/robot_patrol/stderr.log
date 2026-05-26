@@ -1,0 +1,21 @@
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:[m[K In constructor '[01m[KPatrolNode::PatrolNode(const string&, double)[m[K':
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:14:53:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Ktimer_period[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   14 |     PatrolNode(const std::string& node_name, [01;35m[Kdouble timer_period = 2.0[m[K) : Node(node_name), node_name_(node_name)
+      |                                              [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:[m[K In member function '[01m[Kvoid PatrolNode::scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K':
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:56:15:[m[K [01;35m[Kwarning: [m[Kvariable '[01m[Kmin_index[m[K' set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+   56 |         float [01;35m[Kmin_index[m[K = 999999.0; //min_index is meant to show what angle we got the minimum distance;
+      |               [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:[m[K In function '[01m[Kvoid signal_handler(int)[m[K':
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:142:33:[m[K [01;31m[Kerror: [m[K'[01m[Kvoid PatrolNode::stop_rover()[m[K' is private within this context
+  142 |     [01;31m[Ksimple_publisher->stop_rover()[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:114:10:[m[K [01;36m[Knote: [m[Kdeclared private here
+  114 |     void [01;36m[Kstop_rover[m[K()
+      |          [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:140:25:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Ksignum[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  140 | void signal_handler([01;35m[Kint signum[m[K)
+      |                     [01;35m[K~~~~^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/robot_patrol_executable.dir/build.make:76: CMakeFiles/robot_patrol_executable.dir/src/patrol.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_patrol_executable.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

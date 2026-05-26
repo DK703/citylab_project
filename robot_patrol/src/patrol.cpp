@@ -29,11 +29,18 @@ public:
         );
 
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/fastbot_1/cmd_vel", 10);
-        linearx = 0.5;
+        linearx = 0.4;
         obstacle_detected_ = false;
         angularz = 0.0;
         
 
+    }
+
+    void stop_rover()
+    {
+        auto stop_msg = geometry_msgs::msg::Twist();  // All fields default to zero, which represents stopping the rover
+        publisher_->publish(stop_msg);
+        RCLCPP_INFO(this->get_logger(), "Publishing stop message before shutdown");
     }
 
     
@@ -45,6 +52,9 @@ private:
         float ci = (0.0 - msg->angle_min) / msg->angle_increment; //rounds to 99.5 
         float start = ci - (M_PI/2) / msg->angle_increment;       //49.75
         float end   = ci + (M_PI/2) / msg->angle_increment;       //149.25
+
+        //start = 33;
+        //end = 166;
 
         //note, info conflicts with a previous graph given on the previous class. These values are placeholders as a result
 
@@ -85,29 +95,38 @@ private:
 
         //RCLCPP_INFO(this->get_logger(), "%f is max distance and %f is max index", max_distance, max_index);
         direction_ = msg->angle_min + max_index * msg->angle_increment;
+        RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
+        //angularz = direction_/2;
 
         if (min_distance < 0.35f) {
             obstacle_detected_ = true;
-            linearx = 0;
+            RCLCPP_INFO(this->get_logger(), "obstacle detected");
+            angularz = direction_/2;
+            //linearx = 0;
             
-            RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
+            //RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
         } else {
             obstacle_detected_ = false;
+            angularz = 0;
         }        
     }
 
     void timer_callback()
     {
         auto ros_time_stamp = this->get_clock()->now();
-        RCLCPP_INFO(this->get_logger(), "%s is alive...Time(nanoseconds=%ld, clock_type=ROS_TIME)",
-                    node_name_.c_str(),
-                    ros_time_stamp.nanoseconds());
+        //RCLCPP_INFO(this->get_logger(), "%s is alive...Time(nanoseconds=%ld, clock_type=ROS_TIME)",
+           //         node_name_.c_str(),
+            //        ros_time_stamp.nanoseconds());
         auto msg = geometry_msgs::msg::Twist();
         msg.linear.x = linearx;
+        msg.angular.z = angularz;
         //how we directly publish the values!
         publisher_->publish(msg);
         RCLCPP_INFO(this->get_logger(), "%f is linearx", linearx);
     }
+
+
+
 
     std::string node_name_;
     rclcpp::TimerBase::SharedPtr timer_;
@@ -124,13 +143,25 @@ private:
 
 };
 
+std::shared_ptr<PatrolNode> simple_publisher;
+
+
+void signal_handler(int signum)
+{
+    simple_publisher->stop_rover();
+    rclcpp::shutdown();
+}
+
+
 int main(int argc, char** argv)
 {
 
     rclcpp::init(argc, argv);
-    auto node = std::make_shared<PatrolNode>("PatrolNode", 1.0);
-    rclcpp::spin(node);
-    rclcpp::shutdown();
+    //auto node = std::make_shared<PatrolNode>("PatrolNode", 1.0);
+    simple_publisher = std::make_shared<PatrolNode>("PatrolNode", 1.0);
+    signal(SIGINT, signal_handler);
+    rclcpp::spin(simple_publisher);
+    //rclcpp::shutdown();
 
 
     return 0;
