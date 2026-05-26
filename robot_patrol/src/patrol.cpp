@@ -5,6 +5,7 @@
 //#include "sensor_msgs/msg/laser_scan.hpp"
 #include <sensor_msgs/msg/laser_scan.hpp>
 #include <geometry_msgs/msg/twist.hpp>
+
 class PatrolNode : public rclcpp :: Node
 {
 

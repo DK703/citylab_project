@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(OpenCV REQUIRED)
 
 
 if(BUILD_TESTING)
@@ -27,6 +28,11 @@ endif()
 add_executable(robot_patrol_executable src/patrol.cpp)
 ament_target_dependencies(robot_patrol_executable rclcpp geometry_msgs sensor_msgs)
 install(TARGETS robot_patrol_executable DESTINATION lib/${PROJECT_NAME})
+
+#add_executable(rviz_executable src/rviz.cpp)
+#ament_target_dependencies(rviz_executable rclcpp geometry_msgs sensor_msgs OpenCV)
+#target_include_directories(rviz_executable PRIVATE include)
+#install(TARGETS rviz_executable DESTINATION lib/${PROJECT_NAME})
 
 
 #launch file
