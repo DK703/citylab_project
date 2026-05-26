@@ -28,7 +28,10 @@ public:
             std::bind(&PatrolNode::scan_callback, this, std::placeholders::_1)
         );
 
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/fastbot_1/cmd_vel", 10);
+        linearx = 0.5;
+        obstacle_detected_ = false;
+        angularz = 0.0;
         
 
     }
@@ -38,8 +41,15 @@ private:
 
     void scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
     {
-        float start = (msg->angle_min * -1 - M_PI/2) / msg->angle_increment;
-        float end   = (msg->angle_min * -1 + M_PI/2) / msg->angle_increment;
+
+        float ci = (0.0 - msg->angle_min) / msg->angle_increment; //rounds to 99.5 
+        float start = ci - (M_PI/2) / msg->angle_increment;       //49.75
+        float end   = ci + (M_PI/2) / msg->angle_increment;       //149.25
+
+        //note, info conflicts with a previous graph given on the previous class. These values are placeholders as a result
+
+        //RCLCPP_INFO(this->get_logger(), "start=%f, end=%f, angle_min=%f, increment=%f centerindex=%f",
+    //start, end, msg->angle_min, msg->angle_increment, ci);
 
         //hardcode with big number
         float min_distance = 999999.0;
@@ -56,12 +66,13 @@ private:
         }
 
 
-        RCLCPP_INFO(this->get_logger(), "%f is min distance and %f is min index", min_distance, min_index);
+        //RCLCPP_INFO(this->get_logger(), "%f is min distance and %f is min index", min_distance, min_index);
 
         //step 5: find safest area!
 
         float max_distance = 0;
         float max_index = 0;
+        
 
         for(int i = start; i < end; i++)
         {
@@ -72,11 +83,14 @@ private:
             }
         }
 
-        RCLCPP_INFO(this->get_logger(), "%f is max distance and %f is max index", max_distance, max_index);
+        //RCLCPP_INFO(this->get_logger(), "%f is max distance and %f is max index", max_distance, max_index);
         direction_ = msg->angle_min + max_index * msg->angle_increment;
 
         if (min_distance < 0.35f) {
             obstacle_detected_ = true;
+            linearx = 0;
+            
+            RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
         } else {
             obstacle_detected_ = false;
         }        
@@ -88,6 +102,11 @@ private:
         RCLCPP_INFO(this->get_logger(), "%s is alive...Time(nanoseconds=%ld, clock_type=ROS_TIME)",
                     node_name_.c_str(),
                     ros_time_stamp.nanoseconds());
+        auto msg = geometry_msgs::msg::Twist();
+        msg.linear.x = linearx;
+        //how we directly publish the values!
+        publisher_->publish(msg);
+        RCLCPP_INFO(this->get_logger(), "%f is linearx", linearx);
     }
 
     std::string node_name_;
@@ -97,6 +116,9 @@ private:
     float angle;
     float direction_;
     bool obstacle_detected_;
+    float linearx;
+    float lineary;
+    float angularz;
     //float[] arr;
 
 
