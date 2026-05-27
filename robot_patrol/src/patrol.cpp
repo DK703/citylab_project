@@ -6,8 +6,12 @@
 #include <sensor_msgs/msg/laser_scan.hpp>
 #include <geometry_msgs/msg/twist.hpp>
 
+
 class PatrolNode : public rclcpp :: Node
 {
+
+
+
 
 
 
@@ -20,22 +24,27 @@ public:
             std::chrono::milliseconds(100),  // 100ms = 10 Hz
             std::bind(&PatrolNode::timer_callback, this));
 
+
             auto qos = rclcpp::QoS(10).reliability(rclcpp::ReliabilityPolicy::Reliable);  
+
 
             // Topic name is fastbot_1/scan
         laser_subscriber_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
-            "/fastbot_1/scan", //even tho we are using the sensor_msgs/msg/LaserScan type, the topic we subscribe is /fastbot_1/scan 
+            "/scan", //even tho we are using the sensor_msgs/msg/LaserScan type, the topic we subscribe is /fastbot_1/scan
             qos,
             std::bind(&PatrolNode::scan_callback, this, std::placeholders::_1)
         );
 
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/fastbot_1/cmd_vel", 10);
-        linearx = 0.4;
+
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
+        linearx = 0.1;
         obstacle_detected_ = false;
         angularz = 0.0;
-        
+       
+
 
     }
+
 
     void stop_rover()
     {
@@ -44,32 +53,81 @@ public:
         RCLCPP_INFO(this->get_logger(), "Publishing stop message before shutdown");
     }
 
-    
+
+   
 private:
+
 
     void scan_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
     {
 
-        float ci = (0.0 - msg->angle_min) / msg->angle_increment; //rounds to 99.5 
+
+
+
+/*
+        float ci = (0.0 - msg->angle_min) / msg->angle_increment; //rounds to 99.5
         float start = ci - (M_PI/2) / msg->angle_increment;       //49.75
         float end   = ci + (M_PI/2) / msg->angle_increment;       //149.25
-
+        start = 0;
+         
         //start = 33;
         //end = 166;
 
+
         //note, info conflicts with a previous graph given on the previous class. These values are placeholders as a result
 
-        //RCLCPP_INFO(this->get_logger(), "start=%f, end=%f, angle_min=%f, increment=%f centerindex=%f",
-    //start, end, msg->angle_min, msg->angle_increment, ci);
+
+        RCLCPP_INFO(this->get_logger(), "start=%f, end=%f, angle_min=%f, increment=%f centerindex=%f",
+    start, end, msg->angle_min, msg->angle_increment, ci);
+*/
+    //seems like start is -112, end is 112, and center is 0
+
+
+    //readings is 0 to 112 for one side, 338 to 450
+    //
+
+
+
+
+
+
+    int total = (int)msg->ranges.size();
+   
+
+
+
+
+    //gives the mathmatical midpoint for the real robot.  
+    float angle_range = msg->angle_max - msg->angle_min;
+    float center_angle = msg->angle_min + angle_range / 2.0f;
+    int ci = (int)((center_angle - msg->angle_min) / msg->angle_increment);
+
+
+    // Guard start/end within valid array bounds
+    //int start = std::max(0, (int)(ci - (M_PI/2) / msg->angle_increment));
+    int end   = std::min(total - 1, (int)(ci + (M_PI/2) / msg->angle_increment));
+    int start = 0;
+
+
+    RCLCPP_INFO(this->get_logger(),
+        "ci=%d, i_start=%d, i_end=%d, total=%d, angle_min=%.3f, angle_max=%.3f",
+        ci, start, end, total, msg->angle_min, msg->angle_max);
+
+
+   
+
+
+
 
         //hardcode with big number
         float min_distance = 999999.0;
-        float min_index = 999999.0; //min_index is meant to show what angle we got the minimum distance;
+        float min_index = 0; //min_index is meant to show what angle we got the minimum distance;
         for(int i = start; i < end; i++)
         {
          //std::isfinite(msg->ranges[i]) is used to check for an infinite value, which can mess things up;
 
-            if (std::isfinite(msg->ranges[i]) && msg->ranges[i] < min_distance) {
+
+            if (std::isfinite(msg->ranges[i]) && msg->ranges[i] < min_distance && msg->ranges[i] > 0.15f ) {
                 min_distance = msg->ranges[i];
                 min_index = i;
                 }
@@ -77,40 +135,51 @@ private:
         }
 
 
+
+
         //RCLCPP_INFO(this->get_logger(), "%f is min distance and %f is min index", min_distance, min_index);
+
 
         //step 5: find safest area!
 
+
         float max_distance = 0;
         float max_index = 0;
-        
+       
+
 
         for(int i = start; i < end; i++)
         {
-            if (std::isfinite(msg->ranges[i]) && msg->ranges[i] > max_distance){
+            if (std::isfinite(msg->ranges[i]) && msg->ranges[i] > max_distance && msg->ranges[i] > 0.15f ){
             max_distance = msg->ranges[i];
             max_index = i;
+
 
             }
         }
 
+
         //RCLCPP_INFO(this->get_logger(), "%f is max distance and %f is max index", max_distance, max_index);
         direction_ = msg->angle_min + max_index * msg->angle_increment;
+        //RCLCPP_INFO(this->get_logger(), "%f is min index", min_index);
+        RCLCPP_INFO(this->get_logger(), "%f is min distance", min_distance);
         RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
         //angularz = direction_/2;
+
 
         if (min_distance < 0.35f) {
             obstacle_detected_ = true;
             RCLCPP_INFO(this->get_logger(), "obstacle detected");
             angularz = direction_/2;
             //linearx = 0;
-            
+           
             //RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
         } else {
             obstacle_detected_ = false;
             angularz = 0;
         }        
     }
+
 
     void timer_callback()
     {
@@ -129,6 +198,10 @@ private:
 
 
 
+
+
+
+
     std::string node_name_;
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr laser_subscriber_;
@@ -142,9 +215,14 @@ private:
     //float[] arr;
 
 
+
+
 };
 
+
 std::shared_ptr<PatrolNode> simple_publisher;
+
+
 
 
 void signal_handler(int signum)
@@ -154,8 +232,11 @@ void signal_handler(int signum)
 }
 
 
+
+
 int main(int argc, char** argv)
 {
+
 
     rclcpp::init(argc, argv);
     //auto node = std::make_shared<PatrolNode>("PatrolNode", 1.0);
@@ -163,6 +244,8 @@ int main(int argc, char** argv)
     signal(SIGINT, signal_handler);
     rclcpp::spin(simple_publisher);
     //rclcpp::shutdown();
+
+
 
 
     return 0;
