@@ -31,9 +31,10 @@ public:
         );
 
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/fastbot_1/cmd_vel", 10);
-        linearx = 0.2;
+        linearx = 0.1;
         obstacle_detected_ = false;
         angularz = 0.0;
+        turning_ = false;
         
 
     }
@@ -90,7 +91,8 @@ private:
 
  //right to left
 
-        for(int i = start; i < end; i++)
+        //49.75 is rounted to 49 instead of 50
+        for(int i = 50; i < end; i++)
         {
          //std::isfinite(msg->ranges[i]) is used to check for an infinite value, which can mess things up;
 
@@ -117,21 +119,76 @@ private:
 
 
         //RCLCPP_INFO(this->get_logger(), "%f is max distance and %f is max index", max_distance, max_index);
-        direction_ = msg->angle_min + max_index * msg->angle_increment;
-        RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
+        direction_ = max_index * msg->angle_increment * 3.141590;
+        
+        
+
+        if(max_index > 99.5)
+        {
+        direction_ = direction_ * 1.0;
+        
+        }
+        else if(max_index < 99.5)
+        {
+        
+        direction_ = direction_ * -1.0;
+        
+        }
+        else
+        {
+        
+        }
+        
         //angularz = direction_/2;
 
-        if (min_distance < 0.35f) {
+        if(min_distance < 0.35f)
+        {
+            obstacle_detected_ = true;
+        }
+        else
+        {
+            obstacle_detected_ = false;
+        }
+
+        if(obstacle_detected_ && !turning_)
+        {
+          //RCLCPP_INFO(this->get_logger(), "obstacle detected at index %f", max_index);
+          //RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
+          //angularz = direction_/2;
+          commited_direction_ = direction_; 
+          turning_ = true;
+        }
+
+        if (turning_) {
+            //angularz = -0.1;
+            angularz = commited_direction_ / 2;
+          RCLCPP_INFO(this->get_logger(), "obstacle detected at index %f", max_index);
+          RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
+          RCLCPP_INFO(this->get_logger(), "%f is commited direction", commited_direction_);
+          float front_distance = msg->ranges[100];
+          float front_distance2 = msg->ranges[99];
+            if (front_distance > 0.5f && front_distance2 > 0.5f) {
+                turning_ = false;
+                angularz = 0.0;
+            }
+        }
+
+
+/*
+        if (min_distance < 0.35f && !turning_) {
             obstacle_detected_ = true;
             RCLCPP_INFO(this->get_logger(), "obstacle detected at index %f", max_index);
+            RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
             angularz = direction_/2;
+            RCLCPP_INFO(this->get_logger(), "%f is angularz", angularz);
             //linearx = 0;
             
             //RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
         } else {
             obstacle_detected_ = false;
             angularz = 0;
-        }        
+        }  
+*/      
     }
 
     void timer_callback()
@@ -157,10 +214,13 @@ private:
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
     float angle;
     float direction_;
+    float commited_direction_;
     bool obstacle_detected_;
     float linearx;
     float lineary;
     float angularz;
+    bool turning_;
+    
     //float[] arr;
 
 
