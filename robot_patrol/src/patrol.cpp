@@ -160,7 +160,7 @@ private:
         }
 
         if (turning_) {
-            //angularz = -0.1;
+            //angularz = -0.1;u
             angularz = commited_direction_ / 2;
           RCLCPP_INFO(this->get_logger(), "obstacle detected at index %f", max_index);
           RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);

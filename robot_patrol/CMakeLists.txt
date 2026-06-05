@@ -40,5 +40,7 @@ install(TARGETS robot_patrol_executable DESTINATION lib/${PROJECT_NAME})
 install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
 )
-
+install(DIRECTORY rivz/
+  DESTINATION share/${PROJECT_NAME}/rivz
+)
 ament_package()
