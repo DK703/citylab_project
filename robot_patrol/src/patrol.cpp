@@ -25,12 +25,12 @@ public:
 
             // Topic name is fastbot_1/scan
         laser_subscriber_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
-            "/fastbot_1/scan", //even tho we are using the sensor_msgs/msg/LaserScan type, the topic we subscribe is /fastbot_1/scan 
+            "/scan", //even tho we are using the sensor_msgs/msg/LaserScan type, the topic we subscribe is /fastbot_1/scan 
             qos,
             std::bind(&PatrolNode::scan_callback, this, std::placeholders::_1)
         );
 
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/fastbot_1/cmd_vel", 10);
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
         linearx = 0.1;
         obstacle_detected_ = false;
         angularz = 0.0;
@@ -89,10 +89,27 @@ private:
         }
  RCLCPP_INFO(this->get_logger(), "how many=%f",howmany);
 
- //right to left
+ //center to left scan. Not only is size of range 450, but its starts from the center here, and start index is a negative.
 
         //49.75 is rounted to 49 instead of 50
-        for(int i = 50; i < end; i++)
+        for(int i = 1; i < 112; i++)
+        {
+         //std::isfinite(msg->ranges[i]) is used to check for an infinite value, which can mess things up;
+
+            if (std::isfinite(msg->ranges[i]) && msg->ranges[i] < min_distance) {
+                min_distance = msg->ranges[i];
+                min_index = i;
+                }
+
+            if (std::isfinite(msg->ranges[i]) && msg->ranges[i] > max_distance){
+            max_distance = msg->ranges[i];
+            max_index = i;
+
+            }
+           
+        }
+        //right to center
+        for(int i = 338; i < 448; i++)
         {
          //std::isfinite(msg->ranges[i]) is used to check for an infinite value, which can mess things up;
 
@@ -109,7 +126,7 @@ private:
            
         }
 //good for debugging
-    RCLCPP_INFO(this->get_logger(), "front=%f, right=%f left=%f back=%f",msg->ranges[99.5], msg->ranges[49.75], msg->ranges[149.25], msg->ranges[199]);
+    RCLCPP_INFO(this->get_logger(), "front=%f, right=%f left=%f back=%f",msg->ranges[1], msg->ranges[340], msg->ranges[112], msg->ranges[244]);
 
         //RCLCPP_INFO(this->get_logger(), "%f is min distance and %f is min index", min_distance, min_index);
 
@@ -119,16 +136,21 @@ private:
 
 
         //RCLCPP_INFO(this->get_logger(), "%f is max distance and %f is max index", max_distance, max_index);
-        direction_ = max_index * msg->angle_increment * 3.141590;
-        
-        
+        //direction_ = max_index * msg->angle_increment * 3.141590;
+        direction_ = msg->angle_min + max_index * msg->angle_increment;
 
-        if(max_index > 99.5)
+        if (direction_ > M_PI) {
+            direction_ -= 2.0 * M_PI;
+        }
+        
+        //obstacle detected at right, move left
+        if(max_index > 338 && max_index < 448)
         {
         direction_ = direction_ * 1.0;
         
         }
-        else if(max_index < 99.5)
+        //obstacle detected at left, move right
+        else if(max_index > 0 && max_index < 112)
         {
         
         direction_ = direction_ * -1.0;
@@ -136,7 +158,7 @@ private:
         }
         else
         {
-        
+        //direction_ = 0;
         }
         
         //angularz = direction_/2;
@@ -160,16 +182,17 @@ private:
         }
 
         if (turning_) {
-            //angularz = -0.1;u
-            angularz = commited_direction_ / 2;
+            //angularz = 0.1;
+            angularz = commited_direction_;
           RCLCPP_INFO(this->get_logger(), "obstacle detected at index %f", max_index);
           RCLCPP_INFO(this->get_logger(), "%f is direction", direction_);
           RCLCPP_INFO(this->get_logger(), "%f is commited direction", commited_direction_);
-          float front_distance = msg->ranges[100];
-          float front_distance2 = msg->ranges[99];
+          float front_distance = msg->ranges[0];
+          float front_distance2 = msg->ranges[1];
             if (front_distance > 0.5f && front_distance2 > 0.5f) {
                 turning_ = false;
                 angularz = 0.0;
+                RCLCPP_INFO(this->get_logger(), "turning set to false");
             }
         }
 
