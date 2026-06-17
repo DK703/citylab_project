@@ -37,7 +37,7 @@ install(TARGETS robot_patrol_executable DESTINATION lib/${PROJECT_NAME})
 
 #launch file
 
-install(DIRECTORY launch
+install(DIRECTORY launch rivz
   DESTINATION share/${PROJECT_NAME}
 )
 
