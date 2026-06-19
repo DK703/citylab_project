@@ -32,10 +32,10 @@ private:
     {
     
     
-
+    float test = request->laser_data.scan_time;
     std::stringstream ss;
     ss << std::fixed << std::setprecision(2);
-    ss << "TEST ";
+    ss << "TEST: " << test;
       
     response->direction = ss.str();
     
