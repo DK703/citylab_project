@@ -30,6 +30,11 @@ ament_target_dependencies(robot_patrol_executable rclcpp geometry_msgs sensor_ms
 
 install(TARGETS robot_patrol_executable DESTINATION lib/${PROJECT_NAME})
 
+add_executable(robot_patrol_executable2 src/patrol_with_service.cpp)
+ament_target_dependencies(robot_patrol_executable2 rclcpp geometry_msgs sensor_msgs custom_interfaces)
+
+install(TARGETS robot_patrol_executable2 DESTINATION lib/${PROJECT_NAME})
+
 
 add_executable(direction_service src/direction_service.cpp)
 ament_target_dependencies(direction_service rclcpp geometry_msgs sensor_msgs custom_interfaces)
