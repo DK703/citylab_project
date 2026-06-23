@@ -17,7 +17,8 @@ public:
         service_ = this->create_service<custom_interfaces::srv::GetDirection>(
         name_service,std::bind(&DirectionService::get_direction_callback, this, std::placeholders::_1, std::placeholders::_2)
         );
-
+ 
+         RCLCPP_INFO(this->get_logger(), "Service Server Ready");
     
 
     }
@@ -31,7 +32,7 @@ private:
   std::shared_ptr<custom_interfaces::srv::GetDirection::Response> response)
     {
     
-    
+    RCLCPP_INFO(this->get_logger(), "Service Requested");
     float test = request->laser_data.scan_time;
 
     float ci = (0.0 - request->laser_data.angle_min) / request->laser_data.angle_increment;
@@ -65,7 +66,7 @@ private:
 
    
     //start, rightend
-    for(int i = start; i < rightend; i++)
+    for(int i = 50; i < 80; i++)
     {
         if(std::isfinite(request->laser_data.ranges[i]))
         {
@@ -74,7 +75,7 @@ private:
     }
 
     //rightend, frontend
-    for(int i = rightend; i < frontend; i++)
+    for(int i = 80; i < 120; i++)
     {
 
         if(std::isfinite(request->laser_data.ranges[i]))
@@ -84,7 +85,7 @@ private:
     }
 
     //frontend, leftend
-    for(int i = frontend; i < leftend; i++)
+    for(int i = 120; i < 149; i++)
     {
     
         if(std::isfinite(request->laser_data.ranges[i]))
@@ -123,7 +124,7 @@ private:
     //std::cout << "right is " << total_dist_sec_right;
     //std::cout << "front is "<< total_dist_sec_front;
     //std::cout << "left is " << total_dist_sec_left;
-    RCLCPP_INFO(this->get_logger(), "start=%f, step=%d rightend=%d frontend=%d leftend=%d", start, step, rightend, frontend, leftend);
+    //RCLCPP_INFO(this->get_logger(), "start=%f, step=%d rightend=%d frontend=%d leftend=%d", start, step, rightend, frontend, leftend);
 
     
     std::stringstream ss;
@@ -137,6 +138,7 @@ private:
     response->info = ss.str();
     response->direction = direction;
     
+    RCLCPP_INFO(this->get_logger(), "Service Complete");
     
     }
     

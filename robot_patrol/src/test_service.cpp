@@ -26,6 +26,8 @@ public:
             }
             RCLCPP_INFO(this->get_logger(), "Service not available, waiting again...");
         }
+
+        RCLCPP_INFO(this->get_logger(), "Service Client Ready");
     }
 
 private:
@@ -33,6 +35,7 @@ private:
     {
         auto request = std::make_shared<custom_interfaces::srv::GetDirection::Request>();
         request->laser_data = *msg;
+        RCLCPP_INFO(this->get_logger(), "Service Request");
 
         client_->async_send_request(
             request,
@@ -43,7 +46,7 @@ private:
         rclcpp::Client<custom_interfaces::srv::GetDirection>::SharedFuture future)
     {
         auto response = future.get();
-        //RCLCPP_INFO(this->get_logger(), "Direction Report: %s", response->direction.c_str());
+        RCLCPP_INFO(this->get_logger(), "Service Response: %s", response->direction.c_str());
         //RCLCPP_INFO(this->get_logger(), "Status Report: %s", response->info.c_str());
     }
 
