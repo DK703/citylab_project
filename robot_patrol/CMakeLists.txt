@@ -63,5 +63,7 @@ find_package(rosidl_default_generators REQUIRED)
 install(DIRECTORY launch rivz
   DESTINATION share/${PROJECT_NAME}
 )
-
+install(DIRECTORY rivz/
+  DESTINATION share/${PROJECT_NAME}/rivz
+)
 ament_package()
