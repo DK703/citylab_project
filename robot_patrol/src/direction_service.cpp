@@ -49,31 +49,39 @@ private:
   
     //iv decided on whether i want to encode values or not to either be a calculation or hardcode values
     //ranges[i]
-    int total_dist_sec_right = 0;
-    int total_dist_sec_front = 0;
-    int total_dist_sec_left = 0;
+    float total_dist_sec_right = 0;
+    float total_dist_sec_front = 0;
+    float total_dist_sec_left = 0;
 
     int rightend = start + step;
     int frontend = rightend + step;
     int leftend =  frontend + step;
+
+
+     //RCLCPP_INFO(this->get_logger(), "front=%f, right=%f left=%f back=%f",request->laser_data.ranges[99.5], request->laser_data.ranges[49.75], request->laser_data.ranges[149.25], request->laser_data.ranges[199]);
     
     for(int i = start; i < rightend; i++)
     {
-    
-        total_dist_sec_right += request->laser_data.ranges[i];
-    
+        if(std::isfinite(request->laser_data.ranges[i]))
+        {
+            total_dist_sec_right += request->laser_data.ranges[i];
+        }
     }
     for(int i = rightend; i < frontend; i++)
     {
-    
-        total_dist_sec_front += request->laser_data.ranges[i];
-    
+
+        if(std::isfinite(request->laser_data.ranges[i]))
+        {
+            total_dist_sec_front += request->laser_data.ranges[i];
+        }
     }
     for(int i = frontend; i < leftend; i++)
     {
     
-        total_dist_sec_left += request->laser_data.ranges[i];
-    
+        if(std::isfinite(request->laser_data.ranges[i]))
+        {
+            total_dist_sec_left += request->laser_data.ranges[i];
+        }    
     }
 
     if(total_dist_sec_right > total_dist_sec_front && total_dist_sec_right >  total_dist_sec_left)
@@ -84,14 +92,14 @@ private:
     {
         direction = "front";
     }
-    if(total_dist_sec_left > total_dist_sec_front && total_dist_sec_left >  total_dist_sec_front)
+    if(total_dist_sec_left > total_dist_sec_front && total_dist_sec_left >  total_dist_sec_right)
     {
         direction = "left";
     }
 
-    std::cout << "right is " << total_dist_sec_right;
-    std::cout << "front is "<< total_dist_sec_front;
-    std::cout << "left is " << total_dist_sec_left;
+    //std::cout << "right is " << total_dist_sec_right;
+    //std::cout << "front is "<< total_dist_sec_front;
+    //std::cout << "left is " << total_dist_sec_left;
 
     
     std::stringstream ss;
@@ -100,7 +108,8 @@ private:
     "right is " << total_dist_sec_right << "front is" << total_dist_sec_front << 
     "left is" << total_dist_sec_left << "direction is " << direction;
       
-    response->direction = ss.str();
+    response->info = ss.str();
+    response->direction = direction;
     
     
     }
