@@ -11,7 +11,7 @@ find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
-
+find_package(custom_interfaces REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -26,18 +26,41 @@ if(BUILD_TESTING)
 endif()
 
 add_executable(robot_patrol_executable src/patrol.cpp)
-ament_target_dependencies(robot_patrol_executable rclcpp geometry_msgs sensor_msgs)
+ament_target_dependencies(robot_patrol_executable rclcpp geometry_msgs sensor_msgs custom_interfaces)
+
 install(TARGETS robot_patrol_executable DESTINATION lib/${PROJECT_NAME})
+
+add_executable(robot_patrol_executable2 src/patrol_with_service.cpp)
+ament_target_dependencies(robot_patrol_executable2 rclcpp geometry_msgs sensor_msgs custom_interfaces)
+
+install(TARGETS robot_patrol_executable2 DESTINATION lib/${PROJECT_NAME})
+
+
+add_executable(direction_service src/direction_service.cpp)
+ament_target_dependencies(direction_service rclcpp geometry_msgs sensor_msgs custom_interfaces)
+install(TARGETS direction_service DESTINATION lib/${PROJECT_NAME})
+
+add_executable(test_service src/test_service.cpp)
+ament_target_dependencies(test_service rclcpp geometry_msgs sensor_msgs custom_interfaces)
+install(TARGETS test_service DESTINATION lib/${PROJECT_NAME})
+
 
 #add_executable(rviz_executable src/rviz.cpp)
 #ament_target_dependencies(rviz_executable rclcpp geometry_msgs sensor_msgs OpenCV)
 #target_include_directories(rviz_executable PRIVATE include)
 #install(TARGETS rviz_executable DESTINATION lib/${PROJECT_NAME})
 
+# ADD THESE for custom service generation
+find_package(rosidl_default_generators REQUIRED)
+
+#rosidl_generate_interfaces(${PROJECT_NAME}
+ # "srv/GetDirection.srv"
+ # DEPENDENCIES sensor_msgs  # if GetDirection.srv uses sensor_msgs types
+#)
 
 #launch file
 
-install(DIRECTORY launch
+install(DIRECTORY launch rivz
   DESTINATION share/${PROJECT_NAME}
 )
 install(DIRECTORY rivz/
