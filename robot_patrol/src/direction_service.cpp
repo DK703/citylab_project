@@ -58,8 +58,13 @@ private:
     int leftend =  frontend + step;
 
 
-     //RCLCPP_INFO(this->get_logger(), "front=%f, right=%f left=%f back=%f",request->laser_data.ranges[99.5], request->laser_data.ranges[49.75], request->laser_data.ranges[149.25], request->laser_data.ranges[199]);
+    // RCLCPP_INFO(this->get_logger(), "front=%f, right=%f left=%f back=%f",request->laser_data.ranges[99.5], request->laser_data.ranges[49.75], request->laser_data.ranges[149.25], request->laser_data.ranges[199]);
+    //83 and 116???
     
+
+
+   
+    //start, rightend
     for(int i = start; i < rightend; i++)
     {
         if(std::isfinite(request->laser_data.ranges[i]))
@@ -67,6 +72,8 @@ private:
             total_dist_sec_right += request->laser_data.ranges[i];
         }
     }
+
+    //rightend, frontend
     for(int i = rightend; i < frontend; i++)
     {
 
@@ -75,6 +82,8 @@ private:
             total_dist_sec_front += request->laser_data.ranges[i];
         }
     }
+
+    //frontend, leftend
     for(int i = frontend; i < leftend; i++)
     {
     
@@ -83,23 +92,38 @@ private:
             total_dist_sec_left += request->laser_data.ranges[i];
         }    
     }
-
+    float FRONT_THRESHOLD = 1;
     if(total_dist_sec_right > total_dist_sec_front && total_dist_sec_right >  total_dist_sec_left)
     {
-        direction = "right";
+        if(FRONT_THRESHOLD < total_dist_sec_right)
+        {
+            direction = "right";
+        }
+        //direction = "right";
     }
     if(total_dist_sec_front > total_dist_sec_right && total_dist_sec_front >  total_dist_sec_left)
     {
-        direction = "front";
+
+        if(FRONT_THRESHOLD < total_dist_sec_front)
+        {
+            direction = "forward";
+        }
+        
     }
     if(total_dist_sec_left > total_dist_sec_front && total_dist_sec_left >  total_dist_sec_right)
     {
-        direction = "left";
+
+        if(FRONT_THRESHOLD < total_dist_sec_left)
+        {
+            direction = "left";
+        }
+        
     }
 
     //std::cout << "right is " << total_dist_sec_right;
     //std::cout << "front is "<< total_dist_sec_front;
     //std::cout << "left is " << total_dist_sec_left;
+    RCLCPP_INFO(this->get_logger(), "start=%f, step=%d rightend=%d frontend=%d leftend=%d", start, step, rightend, frontend, leftend);
 
     
     std::stringstream ss;
@@ -107,6 +131,8 @@ private:
     ss << "rightend is " << rightend << "frontend is " << frontend << "leftend is " << leftend << 
     "right is " << total_dist_sec_right << "front is" << total_dist_sec_front << 
     "left is" << total_dist_sec_left << "direction is " << direction;
+
+
       
     response->info = ss.str();
     response->direction = direction;

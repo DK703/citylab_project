@@ -149,6 +149,7 @@ private:
         msg.angular.z = angularz;
         //how we directly publish the values!
         publisher_->publish(msg);
+        RCLCPP_INFO(this->get_logger(), "%f is linearx", linearx);
         RCLCPP_INFO(this->get_logger(), "%f is angularz", angularz);
     }
 

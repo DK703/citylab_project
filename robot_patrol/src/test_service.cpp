@@ -43,7 +43,8 @@ private:
         rclcpp::Client<custom_interfaces::srv::GetDirection>::SharedFuture future)
     {
         auto response = future.get();
-        RCLCPP_INFO(this->get_logger(), "Status Report: %s", response->direction.c_str());
+        //RCLCPP_INFO(this->get_logger(), "Direction Report: %s", response->direction.c_str());
+        //RCLCPP_INFO(this->get_logger(), "Status Report: %s", response->info.c_str());
     }
 
     void send_callback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
