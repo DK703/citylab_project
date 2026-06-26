@@ -64,6 +64,9 @@ CMAKE_BINARY_DIR = /home/user/ros2_ws/src/citylab_project/build/robot_patrol
 
 # The main recursive "all" target.
 all: CMakeFiles/robot_patrol_executable.dir/all
+all: CMakeFiles/robot_patrol_executable2.dir/all
+all: CMakeFiles/direction_service.dir/all
+all: CMakeFiles/test_service.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,6 +77,9 @@ preinstall:
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/robot_patrol_uninstall.dir/clean
 clean: CMakeFiles/robot_patrol_executable.dir/clean
+clean: CMakeFiles/robot_patrol_executable2.dir/clean
+clean: CMakeFiles/direction_service.dir/clean
+clean: CMakeFiles/test_service.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -135,7 +141,7 @@ CMakeFiles/robot_patrol_uninstall.dir/clean:
 CMakeFiles/robot_patrol_executable.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable.dir/build.make CMakeFiles/robot_patrol_executable.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable.dir/build.make CMakeFiles/robot_patrol_executable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles --progress-num=1,2 "Built target robot_patrol_executable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles --progress-num=3,4 "Built target robot_patrol_executable"
 .PHONY : CMakeFiles/robot_patrol_executable.dir/all
 
 # Build rule for subdir invocation for target.
@@ -153,6 +159,84 @@ robot_patrol_executable: CMakeFiles/robot_patrol_executable.dir/rule
 CMakeFiles/robot_patrol_executable.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable.dir/build.make CMakeFiles/robot_patrol_executable.dir/clean
 .PHONY : CMakeFiles/robot_patrol_executable.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/robot_patrol_executable2.dir
+
+# All Build rule for target.
+CMakeFiles/robot_patrol_executable2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable2.dir/build.make CMakeFiles/robot_patrol_executable2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable2.dir/build.make CMakeFiles/robot_patrol_executable2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles --progress-num=5,6 "Built target robot_patrol_executable2"
+.PHONY : CMakeFiles/robot_patrol_executable2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/robot_patrol_executable2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/robot_patrol_executable2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles 0
+.PHONY : CMakeFiles/robot_patrol_executable2.dir/rule
+
+# Convenience name for target.
+robot_patrol_executable2: CMakeFiles/robot_patrol_executable2.dir/rule
+.PHONY : robot_patrol_executable2
+
+# clean rule for target.
+CMakeFiles/robot_patrol_executable2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable2.dir/build.make CMakeFiles/robot_patrol_executable2.dir/clean
+.PHONY : CMakeFiles/robot_patrol_executable2.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/direction_service.dir
+
+# All Build rule for target.
+CMakeFiles/direction_service.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direction_service.dir/build.make CMakeFiles/direction_service.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direction_service.dir/build.make CMakeFiles/direction_service.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles --progress-num=1,2 "Built target direction_service"
+.PHONY : CMakeFiles/direction_service.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/direction_service.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/direction_service.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles 0
+.PHONY : CMakeFiles/direction_service.dir/rule
+
+# Convenience name for target.
+direction_service: CMakeFiles/direction_service.dir/rule
+.PHONY : direction_service
+
+# clean rule for target.
+CMakeFiles/direction_service.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direction_service.dir/build.make CMakeFiles/direction_service.dir/clean
+.PHONY : CMakeFiles/direction_service.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_service.dir
+
+# All Build rule for target.
+CMakeFiles/test_service.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service.dir/build.make CMakeFiles/test_service.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service.dir/build.make CMakeFiles/test_service.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles --progress-num=7,8 "Built target test_service"
+.PHONY : CMakeFiles/test_service.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_service.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_service.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/ros2_ws/src/citylab_project/build/robot_patrol/CMakeFiles 0
+.PHONY : CMakeFiles/test_service.dir/rule
+
+# Convenience name for target.
+test_service: CMakeFiles/test_service.dir/rule
+.PHONY : test_service
+
+# clean rule for target.
+CMakeFiles/test_service.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service.dir/build.make CMakeFiles/test_service.dir/clean
+.PHONY : CMakeFiles/test_service.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

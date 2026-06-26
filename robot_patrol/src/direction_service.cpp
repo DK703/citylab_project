@@ -32,7 +32,7 @@ private:
   std::shared_ptr<custom_interfaces::srv::GetDirection::Response> response)
     {
     
-    RCLCPP_INFO(this->get_logger(), "Service Requested");
+    //RCLCPP_INFO(this->get_logger(), "Service Requested");
     float test = request->laser_data.scan_time;
 
     float ci = (0.0 - request->laser_data.angle_min) / request->laser_data.angle_increment;
@@ -65,8 +65,8 @@ private:
 
 
    
-    //start, rightend
-    for(int i = 50; i < 80; i++)
+    //RCLCPP_INFO(this->get_logger(), "start=%f, step=%d rightend=%d frontend=%d leftend=%d", start, step, rightend, frontend, leftend);
+    for(int i = 335; i < 455; i++)
     {
         if(std::isfinite(request->laser_data.ranges[i]))
         {
@@ -74,8 +74,17 @@ private:
         }
     }
 
-    //rightend, frontend
-    for(int i = 80; i < 120; i++)
+    //front
+    for(int i = 465; i < 455; i++)
+    {
+
+        if(std::isfinite(request->laser_data.ranges[i]))
+        {
+            total_dist_sec_front += request->laser_data.ranges[i];
+        }
+    }
+    //front
+    for(int i = 0; i < 35; i++)
     {
 
         if(std::isfinite(request->laser_data.ranges[i]))
@@ -84,8 +93,8 @@ private:
         }
     }
 
-    //frontend, leftend
-    for(int i = 120; i < 149; i++)
+    //left
+    for(int i = 35; i < 110; i++)
     {
     
         if(std::isfinite(request->laser_data.ranges[i]))
@@ -126,6 +135,7 @@ private:
     //std::cout << "left is " << total_dist_sec_left;
     //RCLCPP_INFO(this->get_logger(), "start=%f, step=%d rightend=%d frontend=%d leftend=%d", start, step, rightend, frontend, leftend);
 
+    RCLCPP_INFO(this->get_logger(), "total right=%d total front=%d total left=%d", total_dist_sec_right, total_dist_sec_front, total_dist_sec_left);
     
     std::stringstream ss;
     ss << std::fixed << std::setprecision(2);
@@ -138,7 +148,7 @@ private:
     response->info = ss.str();
     response->direction = direction;
     
-    RCLCPP_INFO(this->get_logger(), "Service Complete");
+    //RCLCPP_INFO(this->get_logger(), "Service Complete");
     
     }
     

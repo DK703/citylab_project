@@ -1,0 +1,36 @@
+[35m[1mConsolidate compiler generated dependencies of target robot_patrol_executable2[0m
+[35m[1mConsolidate compiler generated dependencies of target robot_patrol_executable[0m
+[35m[1mConsolidate compiler generated dependencies of target direction_service[0m
+[35m[1mConsolidate compiler generated dependencies of target test_service[0m
+[ 25%] Built target test_service
+[ 50%] Built target direction_service
+[ 75%] Built target robot_patrol_executable2
+[100%] Built target robot_patrol_executable
+-- Install configuration: ""
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/robot_patrol_executable
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/robot_patrol_executable2
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/direction_service
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/test_service
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/main.launch.py
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_direction_service.launch.py
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_test_service.launch.py
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_patrolling.launch.py
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/rivz
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/rivz/virtualrvizconfig.rviz
+-- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/rivz/realvizconfig.rviz
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/package_run_dependencies/robot_patrol
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/parent_prefix_path/robot_patrol
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.sh
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/path.sh
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/path.dsv
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.bash
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.sh
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.zsh
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.dsv
+-- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/package.dsv
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/packages/robot_patrol
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig.cmake
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig-version.cmake
+-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/package.xml
