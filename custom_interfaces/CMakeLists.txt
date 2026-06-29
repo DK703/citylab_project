@@ -27,6 +27,7 @@ endif()
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/GetDirection.srv"
+  "action/GoToPose.action"
    DEPENDENCIES std_msgs geometry_msgs sensor_msgs
 )
 
