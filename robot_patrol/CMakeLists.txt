@@ -19,6 +19,9 @@ find_package(action_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(custom_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(unique_identifier_msgs REQUIRED)
+#find_package(unique_identifier_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -61,13 +64,21 @@ install(TARGETS action_service DESTINATION lib/${PROJECT_NAME})
 #target_include_directories(rviz_executable PRIVATE include)
 #install(TARGETS rviz_executable DESTINATION lib/${PROJECT_NAME})
 
-# ADD THESE for custom service generation
-find_package(rosidl_default_generators REQUIRED)
+
 
 #rosidl_generate_interfaces(${PROJECT_NAME}
  # "srv/GetDirection.srv"
  # DEPENDENCIES sensor_msgs  # if GetDirection.srv uses sensor_msgs types
 #)
+
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "action/GoToPose.action"
+   DEPENDENCIES std_msgs geometry_msgs sensor_msgs unique_identifier_msgs
+)
+
+rosidl_target_interfaces(action_service
+  ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 #launch file
 

@@ -9,14 +9,16 @@
 #include "nav_msgs/msg/odometry.hpp"  
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "nav_msgs/msg/odometry.hpp"
-#include <custom_interfaces/action/go_to_pose.hpp>
+//#include <custom_interfaces/action/go_to_pose.hpp>
+#include "robot_patrol/action/go_to_pose.hpp"
+
 #include <geometry_msgs/msg/twist.hpp>
 class GoToPose : public rclcpp :: Node
 {
 
 
 public:
-    using GoalHandleGoToPose = rclcpp_action::ServerGoalHandle<custom_interfaces::action::GoToPose>;
+    using GoalHandleGoToPose = rclcpp_action::ServerGoalHandle<robot_patrol::action::GoToPose>;
     
 
      //nav_msgs/msg/Odometry
@@ -29,7 +31,7 @@ public:
         {
             using namespace std::placeholders;
 
-            this->action_server_ = rclcpp_action::create_server<custom_interfaces::action::GoToPose>(this, "go_to_pose",
+            this->action_server_ = rclcpp_action::create_server<robot_patrol::action::GoToPose>(this, "go_to_pose",
                 std::bind(&GoToPose::handle_goal, this, _1, _2),
                 std::bind(&GoToPose::handle_cancel, this, _1),
                 std::bind(&GoToPose::handle_accepted, this, _1));
@@ -47,7 +49,7 @@ public:
     
 
 private:
-    rclcpp_action::Server<custom_interfaces::action::GoToPose>::SharedPtr action_server_;
+    rclcpp_action::Server<robot_patrol::action::GoToPose>::SharedPtr action_server_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr publisher_;
 
 
@@ -76,7 +78,7 @@ private:
         RCLCPP_INFO(this->get_logger(), "x is %f, y is %f, theta is %f", msg->pose.pose.position.x,  msg->pose.pose.position.y, theta);
     }
 
-    rclcpp_action::GoalResponse handle_goal(const rclcpp_action::GoalUUID & uuid, std::shared_ptr<const custom_interfaces::action::GoToPose::Goal> goal)
+    rclcpp_action::GoalResponse handle_goal(const rclcpp_action::GoalUUID & uuid, std::shared_ptr<const robot_patrol::action::GoToPose::Goal> goal)
     {
         //RCLCPP_INFO(this->get_logger(), "Received goal request with x: %.2f, y: %.2f, yaw: %.2f", 
         //        goal->x, goal->y, goal->yaw);
@@ -103,9 +105,9 @@ private:
 
         const auto goal = goal_handle->get_goal();
         //Pose2D 
-        auto feedback = std::make_shared<custom_interfaces::action::GoToPose::Feedback>();
+        auto feedback = std::make_shared<robot_patrol::action::GoToPose::Feedback>();
         //bool
-        auto result = std::make_shared<custom_interfaces::action::GoToPose::Result>();
+        auto result = std::make_shared<robot_patrol::action::GoToPose::Result>();
 
         // ADD this before the if check:
   
@@ -149,7 +151,7 @@ private:
                 break;  
             }
 
-            if (distance < 0.1) {
+            if (distance < 0.5) {
                 cmd_vel.linear.x = 0;
                 cmd_vel.angular.z = 0;  
                 publisher_->publish(cmd_vel);
