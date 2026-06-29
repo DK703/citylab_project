@@ -37,14 +37,14 @@ public:
                 std::bind(&GoToPose::handle_accepted, this, _1));
             auto qos = rclcpp::QoS(10).reliability(rclcpp::ReliabilityPolicy::Reliable);  
             odom_subscriber_ = this->create_subscription<nav_msgs::msg::Odometry>(
-            "/fastbot_1/odom", 
+            "/odom", 
             qos,
             std::bind(&GoToPose::scan_callback, this, std::placeholders::_1)
             
         );
 
 
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/fastbot_1/cmd_vel", 10);
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
         }
     
 
@@ -151,7 +151,7 @@ private:
                 break;  
             }
 
-            if (distance < 0.5) {
+            if (distance < 0.4) {
                 cmd_vel.linear.x = 0;
                 cmd_vel.angular.z = 0;  
                 publisher_->publish(cmd_vel);

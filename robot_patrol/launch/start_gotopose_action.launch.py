@@ -15,6 +15,12 @@ def generate_launch_description():
         Node(
             package='robot_patrol',
             executable='action_service',
-            output='screen')
+            output='screen'),
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            arguments=['-d', rviz_config],
+            output='screen'
+        )
     
     ])

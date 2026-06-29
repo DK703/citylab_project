@@ -59,14 +59,14 @@ private:
     int leftend =  frontend + step;
 
 
-    // RCLCPP_INFO(this->get_logger(), "front=%f, right=%f left=%f back=%f",request->laser_data.ranges[99.5], request->laser_data.ranges[49.75], request->laser_data.ranges[149.25], request->laser_data.ranges[199]);
+    //RCLCPP_INFO(this->get_logger(), "front=%f, right=%f left=%f back=%f",request->laser_data.ranges[99.5], request->laser_data.ranges[49.75], request->laser_data.ranges[149.25], request->laser_data.ranges[199]);
     //83 and 116???
     
 
-
+    RCLCPP_INFO(this->get_logger(), "ranges is %f", request->laser_data.ranges);
    
     //RCLCPP_INFO(this->get_logger(), "start=%f, step=%d rightend=%d frontend=%d leftend=%d", start, step, rightend, frontend, leftend);
-    for(int i = 335; i < 455; i++)
+    for(int i = 335; i < 430; i++)
     {
         if(std::isfinite(request->laser_data.ranges[i]))
         {
@@ -75,7 +75,7 @@ private:
     }
 
     //front
-    for(int i = 465; i < 455; i++)
+    for(int i = 430; i < 465; i++)
     {
 
         if(std::isfinite(request->laser_data.ranges[i]))
