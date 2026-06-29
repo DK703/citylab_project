@@ -31,4 +31,11 @@ float32[] ranges             # range data [m]
                              # (Note: values < range_min or > range_max should be discarded)
 float32[] intensities        # intensity data [device-specific units].  If your
                              # device does not provide intensities, please leave
-                             # the array empty.
+                             # the array empty.\
+                    
+
+user:~/ros2_ws$ ros2 interface proto geometry_msgs/msg/Pose2D
+"x: 0.0
+y: 0.0
+theta: 0.0
+"

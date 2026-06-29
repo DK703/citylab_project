@@ -27,7 +27,7 @@ public:
 
             // Topic name is fastbot_1/scan
         laser_subscriber_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
-            "/fastbot_1/scan", //even tho we are using the sensor_msgs/msg/LaserScan type, the topic we subscribe is /fastbot_1/scan 
+            "fastbot_1/scan", //even tho we are using the sensor_msgs/msg/LaserScan type, the topic we subscribe is /fastbot_1/scan 
             qos,
             std::bind(&PatrolNode::scan_callback, this, std::placeholders::_1)
         );
@@ -36,7 +36,7 @@ public:
         
       
 
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/fastbot_1/cmd_vel", 10);
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("fastbot_1/cmd_vel", 10);
         linearx = 0.0;
         obstacle_detected_ = false;
         angularz = 0.0;
@@ -71,7 +71,7 @@ private:
     {
         auto request = std::make_shared<custom_interfaces::srv::GetDirection::Request>();
         request->laser_data = *msg;
-
+        RCLCPP_INFO(this->get_logger(), "front=%f, right=%f left=%f back=%f",msg->ranges[1], msg->ranges[338], msg->ranges[112], msg->ranges[225]);
         client_->async_send_request(
             request,
             std::bind(&PatrolNode::response_callback, this, std::placeholders::_1));
@@ -96,6 +96,7 @@ private:
  
 
         auto response = future.get();
+        
         RCLCPP_INFO(this->get_logger(), "Status Report: %s", response->direction.c_str());
 
       

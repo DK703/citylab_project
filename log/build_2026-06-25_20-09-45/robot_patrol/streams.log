@@ -1,0 +1,173 @@
+[0.013s] Invoking command in '/home/user/ros2_ws/src/citylab_project/build/robot_patrol': AMENT_PREFIX_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description LD_LIBRARY_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/user/ros2_ws/install/custom_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake --build /home/user/ros2_ws/src/citylab_project/build/robot_patrol -- -j8 -l8
+[0.037s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.171s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.204s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.207s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.213s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.223s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.236s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.271s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.278s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.299s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.355s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.368s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.398s] -- Found OpenCV: /usr (found version "4.5.4") 
+[0.398s] -- Found custom_interfaces: 0.0.0 (/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake)
+[0.416s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.499s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.515s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.515s] -- Configured cppcheck include dirs: 
+[0.515s] -- Configured cppcheck exclude dirs and/or files: 
+[0.516s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.516s] -- Added test 'lint_cmake' to check CMake code style
+[0.517s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.518s] -- Added test 'uncrustify' to check C / C++ code style
+[0.518s] -- Configured uncrustify additional arguments: 
+[0.519s] -- Added test 'xmllint' to check XML markup files
+[0.519s] -- Configuring done
+[0.543s] -- Generating done
+[0.553s] -- Build files have been written to: /home/user/ros2_ws/src/citylab_project/build/robot_patrol
+[0.585s] [35m[1mConsolidate compiler generated dependencies of target robot_patrol_executable[0m
+[0.598s] [ 12%] [32mBuilding CXX object CMakeFiles/direction_service.dir/src/direction_service.cpp.o[0m
+[0.598s] [ 25%] [32mBuilding CXX object CMakeFiles/robot_patrol_executable2.dir/src/patrol_with_service.cpp.o[0m
+[0.598s] [ 37%] [32mBuilding CXX object CMakeFiles/test_service.dir/src/test_service.cpp.o[0m
+[0.609s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_patrol_executable.dir/src/patrol.cpp.o[0m
+[3.221s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[3.222s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[3.222s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[3.222s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[3.222s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[3.222s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[3.222s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[3.222s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[3.222s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.223s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.223s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.223s]                  from [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:1[m[K:
+[3.223s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:[m[K In member function '[01m[Kvoid DirectionService::get_direction_callback(std::shared_ptr<custom_interfaces::srv::GetDirection_Request_<std::allocator<void> > >, std::shared_ptr<custom_interfaces::srv::GetDirection_Response_<std::allocator<void> > >)[m[K':
+[3.223s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:138:37:[m[K [01;35m[Kwarning: [m[Kformat '[01m[K%d[m[K' expects argument of type '[01m[Kint[m[K', but argument 5 has type '[01m[Kdouble[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[3.223s]   138 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"total right=%d total front=%d total left=%d"[m[K, [32m[Ktotal_dist_sec_right[m[K, total_dist_sec_front, total_dist_sec_left);
+[3.223s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~[m[K
+[3.223s]       |                                                                                    [32m[K|[m[K
+[3.223s]       |                                                                                    [32m[Kdouble[m[K
+[3.224s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:138:51:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[3.224s]   138 |     RCLCPP_INFO(this->get_logger(), "total right=[01;36m[K%d[m[K total front=%d total left=%d", total_dist_sec_right, total_dist_sec_front, total_dist_sec_left);
+[3.224s]       |                                                  [01;36m[K~^[m[K
+[3.224s]       |                                                   [01;36m[K|[m[K
+[3.224s]       |                                                   [01;36m[Kint[m[K
+[3.224s]       |                                                  [32m[K%f[m[K
+[3.224s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[3.224s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[3.225s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[3.225s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[3.225s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[3.225s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[3.225s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[3.226s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[3.226s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.226s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.226s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.226s]                  from [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:1[m[K:
+[3.226s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:138:37:[m[K [01;35m[Kwarning: [m[Kformat '[01m[K%d[m[K' expects argument of type '[01m[Kint[m[K', but argument 6 has type '[01m[Kdouble[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[3.226s]   138 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"total right=%d total front=%d total left=%d"[m[K, total_dist_sec_right, [32m[Ktotal_dist_sec_front[m[K, total_dist_sec_left);
+[3.226s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                        [32m[K~~~~~~~~~~~~~~~~~~~~[m[K
+[3.226s]       |                                                                                                          [32m[K|[m[K
+[3.227s]       |                                                                                                          [32m[Kdouble[m[K
+[3.227s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:138:66:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[3.227s]   138 |     RCLCPP_INFO(this->get_logger(), "total right=%d total front=[01;36m[K%d[m[K total left=%d", total_dist_sec_right, total_dist_sec_front, total_dist_sec_left);
+[3.227s]       |                                                                 [01;36m[K~^[m[K
+[3.227s]       |                                                                  [01;36m[K|[m[K
+[3.227s]       |                                                                  [01;36m[Kint[m[K
+[3.227s]       |                                                                 [32m[K%f[m[K
+[3.227s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.228s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.229s]                  from [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:1[m[K:
+[3.229s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:138:37:[m[K [01;35m[Kwarning: [m[Kformat '[01m[K%d[m[K' expects argument of type '[01m[Kint[m[K', but argument 7 has type '[01m[Kdouble[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[3.229s]   138 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"total right=%d total front=%d total left=%d"[m[K, total_dist_sec_right, total_dist_sec_front, [32m[Ktotal_dist_sec_left[m[K);
+[3.229s]       |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                                              [32m[K~~~~~~~~~~~~~~~~~~~[m[K
+[3.229s]       |                                                                                                                                [32m[K|[m[K
+[3.229s]       |                                                                                                                                [32m[Kdouble[m[K
+[3.229s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:138:80:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[3.229s]   138 |     RCLCPP_INFO(this->get_logger(), "total right=%d total front=%d total left=[01;36m[K%d[m[K", total_dist_sec_right, total_dist_sec_front, total_dist_sec_left);
+[3.230s]       |                                                                               [01;36m[K~^[m[K
+[3.230s]       |                                                                                [01;36m[K|[m[K
+[3.230s]       |                                                                                [01;36m[Kint[m[K
+[3.230s]       |                                                                               [32m[K%f[m[K
+[3.230s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:36:11:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Ktest[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.230s]    36 |     float [01;35m[Ktest[m[K = request->laser_data.scan_time;
+[3.230s]       |           [01;35m[K^~~~[m[K
+[3.455s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:[m[K In constructor '[01m[KPatrolNode::PatrolNode(const string&, double)[m[K':
+[3.455s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:16:53:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Ktimer_period[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.455s]    16 |     PatrolNode(const std::string& node_name, [01;35m[Kdouble timer_period = 2.0[m[K) : Node(node_name), node_name_(node_name)
+[3.455s]       |                                              [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[3.461s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:[m[K In member function '[01m[Kvoid PatrolNode::scan_callback(sensor_msgs::msg::LaserScan_<std::allocator<void> >::SharedPtr)[m[K':
+[3.461s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:61:15:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kstartindex[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.462s]    61 |         float [01;35m[Kstartindex[m[K = 0;
+[3.462s]       |               [01;35m[K^~~~~~~~~~[m[K
+[3.462s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:78:15:[m[K [01;35m[Kwarning: [m[Kvariable '[01m[Kmin_index[m[K' set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[3.462s]    78 |         float [01;35m[Kmin_index[m[K = 999999.0; //min_index is meant to show what angle we got the minimum distance;
+[3.462s]       |               [01;35m[K^~~~~~~~~[m[K
+[3.465s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:[m[K In function '[01m[Kvoid signal_handler(int)[m[K':
+[3.465s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol.cpp:232:25:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Ksignum[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.466s]   232 | void signal_handler([01;35m[Kint signum[m[K)
+[3.466s]       |                     [01;35m[K~~~~^~~~~~[m[K
+[3.711s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol_with_service.cpp:[m[K In constructor '[01m[KPatrolNode::PatrolNode(const string&, double)[m[K':
+[3.711s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol_with_service.cpp:18:53:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Ktimer_period[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.712s]    18 |     PatrolNode(const std::string& node_name, [01;35m[Kdouble timer_period = 2.0[m[K) : Node(node_name), node_name_(node_name)
+[3.712s]       |                                              [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[3.723s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol_with_service.cpp:[m[K In function '[01m[Kvoid signal_handler(int)[m[K':
+[3.723s] [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/patrol_with_service.cpp:188:25:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Ksignum[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.724s]   188 | void signal_handler([01;35m[Kint signum[m[K)
+[3.724s]       |                     [01;35m[K~~~~^~~~~~[m[K
+[4.452s] [ 62%] [32m[1mLinking CXX executable direction_service[0m
+[4.654s] [ 62%] Built target direction_service
+[9.991s] [ 75%] [32m[1mLinking CXX executable robot_patrol_executable[0m
+[10.178s] [ 87%] [32m[1mLinking CXX executable test_service[0m
+[10.336s] [ 87%] Built target robot_patrol_executable
+[10.513s] [ 87%] Built target test_service
+[10.841s] [100%] [32m[1mLinking CXX executable robot_patrol_executable2[0m
+[11.196s] [100%] Built target robot_patrol_executable2
+[11.206s] Invoked command in '/home/user/ros2_ws/src/citylab_project/build/robot_patrol' returned '0': AMENT_PREFIX_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description LD_LIBRARY_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/user/ros2_ws/install/custom_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake --build /home/user/ros2_ws/src/citylab_project/build/robot_patrol -- -j8 -l8
+[11.207s] Invoking command in '/home/user/ros2_ws/src/citylab_project/build/robot_patrol': AMENT_PREFIX_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description LD_LIBRARY_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/user/ros2_ws/install/custom_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake --install /home/user/ros2_ws/src/citylab_project/build/robot_patrol
+[11.214s] -- Install configuration: ""
+[11.214s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/robot_patrol_executable
+[11.220s] -- Set runtime path of "/home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/robot_patrol_executable" to ""
+[11.220s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/robot_patrol_executable2
+[11.225s] -- Set runtime path of "/home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/robot_patrol_executable2" to ""
+[11.225s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/direction_service
+[11.226s] -- Set runtime path of "/home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/direction_service" to ""
+[11.226s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/test_service
+[11.232s] -- Set runtime path of "/home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/test_service" to ""
+[11.232s] -- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch
+[11.232s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/main.launch.py
+[11.232s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_direction_service.launch.py
+[11.232s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_test_service.launch.py
+[11.233s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_patrolling.launch.py
+[11.233s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/rivz
+[11.233s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/rivz/virtualrvizconfig.rviz
+[11.233s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/rivz/realvizconfig.rviz
+[11.233s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/package_run_dependencies/robot_patrol
+[11.233s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/parent_prefix_path/robot_patrol
+[11.234s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.sh
+[11.234s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.dsv
+[11.234s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/path.sh
+[11.234s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/path.dsv
+[11.234s] -- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.bash
+[11.235s] -- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.sh
+[11.235s] -- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.zsh
+[11.235s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.dsv
+[11.235s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/package.dsv
+[11.235s] -- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/packages/robot_patrol
+[11.235s] -- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig.cmake
+[11.236s] -- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig-version.cmake
+[11.236s] -- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/package.xml
+[11.238s] Invoked command in '/home/user/ros2_ws/src/citylab_project/build/robot_patrol' returned '0': AMENT_PREFIX_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description LD_LIBRARY_PATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/user/ros2_ws/install/custom_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} _=/usr/bin/env /usr/bin/cmake --install /home/user/ros2_ws/src/citylab_project/build/robot_patrol

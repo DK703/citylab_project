@@ -8,10 +8,20 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclcpp_action REQUIRED)
+
 find_package(geometry_msgs REQUIRED)
+find_package(nav2_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
+find_package(action_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(custom_interfaces REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(unique_identifier_msgs REQUIRED)
+#find_package(unique_identifier_msgs REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -44,19 +54,31 @@ add_executable(test_service src/test_service.cpp)
 ament_target_dependencies(test_service rclcpp geometry_msgs sensor_msgs custom_interfaces)
 install(TARGETS test_service DESTINATION lib/${PROJECT_NAME})
 
+add_executable(action_service src/go_to_pose_action.cpp)
+ament_target_dependencies(action_service rclcpp rclcpp_action geometry_msgs nav2_msgs tf2 tf2_geometry_msgs action_msgs nav2_msgs nav_msgs custom_interfaces)
+install(TARGETS action_service DESTINATION lib/${PROJECT_NAME})
+#rclcpp_action leo_description geometry_msgs nav2_msgs tf2 tf2_geometry_msgs action_msgs)
 
 #add_executable(rviz_executable src/rviz.cpp)
 #ament_target_dependencies(rviz_executable rclcpp geometry_msgs sensor_msgs OpenCV)
 #target_include_directories(rviz_executable PRIVATE include)
 #install(TARGETS rviz_executable DESTINATION lib/${PROJECT_NAME})
 
-# ADD THESE for custom service generation
-find_package(rosidl_default_generators REQUIRED)
+
 
 #rosidl_generate_interfaces(${PROJECT_NAME}
  # "srv/GetDirection.srv"
  # DEPENDENCIES sensor_msgs  # if GetDirection.srv uses sensor_msgs types
 #)
+
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "action/GoToPose.action"
+   DEPENDENCIES std_msgs geometry_msgs sensor_msgs unique_identifier_msgs
+)
+
+rosidl_target_interfaces(action_service
+  ${PROJECT_NAME} "rosidl_typesupport_cpp")
 
 #launch file
 

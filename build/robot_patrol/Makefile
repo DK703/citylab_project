@@ -210,6 +210,69 @@ robot_patrol_executable/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable.dir/build.make CMakeFiles/robot_patrol_executable.dir/build
 .PHONY : robot_patrol_executable/fast
 
+#=============================================================================
+# Target rules for targets named robot_patrol_executable2
+
+# Build rule for target.
+robot_patrol_executable2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot_patrol_executable2
+.PHONY : robot_patrol_executable2
+
+# fast build rule for target.
+robot_patrol_executable2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable2.dir/build.make CMakeFiles/robot_patrol_executable2.dir/build
+.PHONY : robot_patrol_executable2/fast
+
+#=============================================================================
+# Target rules for targets named direction_service
+
+# Build rule for target.
+direction_service: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 direction_service
+.PHONY : direction_service
+
+# fast build rule for target.
+direction_service/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direction_service.dir/build.make CMakeFiles/direction_service.dir/build
+.PHONY : direction_service/fast
+
+#=============================================================================
+# Target rules for targets named test_service
+
+# Build rule for target.
+test_service: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_service
+.PHONY : test_service
+
+# fast build rule for target.
+test_service/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service.dir/build.make CMakeFiles/test_service.dir/build
+.PHONY : test_service/fast
+
+src/direction_service.o: src/direction_service.cpp.o
+.PHONY : src/direction_service.o
+
+# target to build an object file
+src/direction_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direction_service.dir/build.make CMakeFiles/direction_service.dir/src/direction_service.cpp.o
+.PHONY : src/direction_service.cpp.o
+
+src/direction_service.i: src/direction_service.cpp.i
+.PHONY : src/direction_service.i
+
+# target to preprocess a source file
+src/direction_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direction_service.dir/build.make CMakeFiles/direction_service.dir/src/direction_service.cpp.i
+.PHONY : src/direction_service.cpp.i
+
+src/direction_service.s: src/direction_service.cpp.s
+.PHONY : src/direction_service.s
+
+# target to generate assembly for a file
+src/direction_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/direction_service.dir/build.make CMakeFiles/direction_service.dir/src/direction_service.cpp.s
+.PHONY : src/direction_service.cpp.s
+
 src/patrol.o: src/patrol.cpp.o
 .PHONY : src/patrol.o
 
@@ -234,6 +297,54 @@ src/patrol.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable.dir/build.make CMakeFiles/robot_patrol_executable.dir/src/patrol.cpp.s
 .PHONY : src/patrol.cpp.s
 
+src/patrol_with_service.o: src/patrol_with_service.cpp.o
+.PHONY : src/patrol_with_service.o
+
+# target to build an object file
+src/patrol_with_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable2.dir/build.make CMakeFiles/robot_patrol_executable2.dir/src/patrol_with_service.cpp.o
+.PHONY : src/patrol_with_service.cpp.o
+
+src/patrol_with_service.i: src/patrol_with_service.cpp.i
+.PHONY : src/patrol_with_service.i
+
+# target to preprocess a source file
+src/patrol_with_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable2.dir/build.make CMakeFiles/robot_patrol_executable2.dir/src/patrol_with_service.cpp.i
+.PHONY : src/patrol_with_service.cpp.i
+
+src/patrol_with_service.s: src/patrol_with_service.cpp.s
+.PHONY : src/patrol_with_service.s
+
+# target to generate assembly for a file
+src/patrol_with_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_patrol_executable2.dir/build.make CMakeFiles/robot_patrol_executable2.dir/src/patrol_with_service.cpp.s
+.PHONY : src/patrol_with_service.cpp.s
+
+src/test_service.o: src/test_service.cpp.o
+.PHONY : src/test_service.o
+
+# target to build an object file
+src/test_service.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service.dir/build.make CMakeFiles/test_service.dir/src/test_service.cpp.o
+.PHONY : src/test_service.cpp.o
+
+src/test_service.i: src/test_service.cpp.i
+.PHONY : src/test_service.i
+
+# target to preprocess a source file
+src/test_service.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service.dir/build.make CMakeFiles/test_service.dir/src/test_service.cpp.i
+.PHONY : src/test_service.cpp.i
+
+src/test_service.s: src/test_service.cpp.s
+.PHONY : src/test_service.s
+
+# target to generate assembly for a file
+src/test_service.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_service.dir/build.make CMakeFiles/test_service.dir/src/test_service.cpp.s
+.PHONY : src/test_service.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,10 +360,22 @@ help:
 	@echo "... test"
 	@echo "... robot_patrol_uninstall"
 	@echo "... uninstall"
+	@echo "... direction_service"
 	@echo "... robot_patrol_executable"
+	@echo "... robot_patrol_executable2"
+	@echo "... test_service"
+	@echo "... src/direction_service.o"
+	@echo "... src/direction_service.i"
+	@echo "... src/direction_service.s"
 	@echo "... src/patrol.o"
 	@echo "... src/patrol.i"
 	@echo "... src/patrol.s"
+	@echo "... src/patrol_with_service.o"
+	@echo "... src/patrol_with_service.i"
+	@echo "... src/patrol_with_service.s"
+	@echo "... src/test_service.o"
+	@echo "... src/test_service.i"
+	@echo "... src/test_service.s"
 .PHONY : help
 
 
