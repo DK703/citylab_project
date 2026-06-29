@@ -27,7 +27,7 @@ public:
 
             // Topic name is fastbot_1/scan
         laser_subscriber_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
-            "/scan", //even tho we are using the sensor_msgs/msg/LaserScan type, the topic we subscribe is /fastbot_1/scan 
+            "fastbot_1/scan", //even tho we are using the sensor_msgs/msg/LaserScan type, the topic we subscribe is /fastbot_1/scan 
             qos,
             std::bind(&PatrolNode::scan_callback, this, std::placeholders::_1)
         );
@@ -36,7 +36,7 @@ public:
         
       
 
-        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
+        publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("fastbot_1/cmd_vel", 10);
         linearx = 0.0;
         obstacle_detected_ = false;
         angularz = 0.0;
