@@ -65,43 +65,37 @@ private:
 
     RCLCPP_INFO(this->get_logger(), "ranges is %f", request->laser_data.ranges);
    
-    //RCLCPP_INFO(this->get_logger(), "start=%f, step=%d rightend=%d frontend=%d leftend=%d", start, step, rightend, frontend, leftend);
-    for(int i = 335; i < 430; i++)
+    //right 
+    for(int i = 337; i < 411; i++)
     {
-        if(std::isfinite(request->laser_data.ranges[i]))
-        {
+        if(std::isfinite(request->laser_data.ranges[i])){
             total_dist_sec_right += request->laser_data.ranges[i];
         }
     }
 
     //front
-    for(int i = 430; i < 465; i++)
+    for(int i = 411; i < 448; i++)
     {
-
-        if(std::isfinite(request->laser_data.ranges[i]))
-        {
+        if(std::isfinite(request->laser_data.ranges[i])){
             total_dist_sec_front += request->laser_data.ranges[i];
         }
     }
-    //front
-    for(int i = 0; i < 35; i++)
+    for(int i = 0; i < 37; i++)
     {
-
-        if(std::isfinite(request->laser_data.ranges[i]))
-        {
-            total_dist_sec_front += request->laser_data.ranges[i];
+    if(std::isfinite(request->laser_data.ranges[i])){
+        total_dist_sec_front += request->laser_data.ranges[i];
         }
     }
 
     //left
-    for(int i = 35; i < 110; i++)
-    {
-    
-        if(std::isfinite(request->laser_data.ranges[i]))
+    for(int i = 37; i < 111; i++)
         {
-            total_dist_sec_left += request->laser_data.ranges[i];
-        }    
-    }
+            if(std::isfinite(request->laser_data.ranges[i]))
+            {total_dist_sec_left += request->laser_data.ranges[i];
+            }
+        
+        }
+
     float FRONT_THRESHOLD = 1;
     if(total_dist_sec_right > total_dist_sec_front && total_dist_sec_right >  total_dist_sec_left)
     {
