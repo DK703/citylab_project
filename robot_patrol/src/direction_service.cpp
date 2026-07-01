@@ -33,7 +33,7 @@ private:
     {
     
     RCLCPP_INFO(this->get_logger(), "Service Requested");
-    float test = request->laser_data.scan_time;
+    //float test = request->laser_data.scan_time;
 
     float ci = (0.0 - request->laser_data.angle_min) / request->laser_data.angle_increment;
     float start = ci - (M_PI/2) / request->laser_data.angle_increment;       //49.75

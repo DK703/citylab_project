@@ -18,10 +18,10 @@ public:
     PatrolNode(const std::string& node_name, double timer_period = 2.0) : Node(node_name), node_name_(node_name)
     {
         timer_ = this->create_wall_timer(
-            //std::chrono::milliseconds(static_cast<int>(timer_period * 1000)),
-            //std::bind(&ObstacleDetectorNode::timer_callback, this));
-            std::chrono::milliseconds(100),  // 100ms = 10 Hz
+            std::chrono::milliseconds(static_cast<int>(timer_period * 1000)),
             std::bind(&PatrolNode::timer_callback, this));
+            //std::chrono::milliseconds(100),  // 100ms = 10 Hz
+            //std::bind(&PatrolNode::timer_callback, this));
 
             auto qos = rclcpp::QoS(10).reliability(rclcpp::ReliabilityPolicy::Reliable);  
 
