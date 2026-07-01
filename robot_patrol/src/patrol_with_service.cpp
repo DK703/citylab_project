@@ -18,10 +18,10 @@ public:
     PatrolNode(const std::string& node_name, double timer_period = 2.0) : Node(node_name), node_name_(node_name)
     {
         timer_ = this->create_wall_timer(
-            //std::chrono::milliseconds(static_cast<int>(timer_period * 1000)),
-            //std::bind(&ObstacleDetectorNode::timer_callback, this));
-            std::chrono::milliseconds(100),  // 100ms = 10 Hz
+            std::chrono::milliseconds(static_cast<int>(timer_period * 1000)),
             std::bind(&PatrolNode::timer_callback, this));
+            //std::chrono::milliseconds(100),  // 100ms = 10 Hz
+            //std::bind(&PatrolNode::timer_callback, this));
 
             auto qos = rclcpp::QoS(10).reliability(rclcpp::ReliabilityPolicy::Reliable);  
 
@@ -176,7 +176,7 @@ private:
     bool direction_initialized_ = false;
     const double DIRECTION_HOLD_MS = 500.0;
     
-    //float[] arr;
+    //float[] arr;dd
 
 
 };
@@ -187,6 +187,7 @@ std::shared_ptr<PatrolNode> simple_publisher;
 
 void signal_handler(int signum)
 {
+    (void)signum;
     simple_publisher->stop_rover();
     rclcpp::shutdown();
 }
