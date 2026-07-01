@@ -41,10 +41,12 @@ public:
             qos,
             std::bind(&GoToPose::scan_callback, this, std::placeholders::_1)
             
+            
         );
 
-
+        RCLCPP_INFO(this->get_logger(), "Action Server Ready");
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/cmd_vel", 10);
+        
         }
     
 
@@ -75,6 +77,8 @@ private:
         current_pos_.y = msg->pose.pose.position.y;
         current_pos_.theta = theta;
 
+        //RCLCPP_INFO(this->get_logger(), "Action Server Ready");
+
         RCLCPP_INFO(this->get_logger(), "x is %f, y is %f, theta is %f", msg->pose.pose.position.x,  msg->pose.pose.position.y, theta);
     }
 
@@ -83,6 +87,8 @@ private:
         //RCLCPP_INFO(this->get_logger(), "Received goal request with x: %.2f, y: %.2f, yaw: %.2f", 
         //        goal->x, goal->y, goal->yaw);
         (void)uuid;
+        RCLCPP_INFO(this->get_logger(), "Received goal request with values x is %f, y is %f, theta is %f", goal->goal_pos.x,  goal->goal_pos.y, goal->goal_pos.theta);
+        RCLCPP_INFO(this->get_logger(), "Action Called");
         return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
     }
 
@@ -125,7 +131,7 @@ private:
 
         geometry_msgs::msg::Twist cmd_vel;
         
-        RCLCPP_INFO(this->get_logger(), "desired_pos_x is %f, desired_pos_u is %f, desired_pos_theta is %f", desired_pos_.x,  desired_pos_.y, desired_pos_.theta);
+        //RCLCPP_INFO(this->get_logger(), "desired_pos_x is %f, desired_pos_u is %f, desired_pos_theta is %f", desired_pos_.x,  desired_pos_.y, desired_pos_.theta);
  
         rclcpp::Rate loop_rate(1); 
 
@@ -138,7 +144,9 @@ private:
 
             double diffx = desired_pos_.x - current_pos_.x;
             double diffy = desired_pos_.y - current_pos_.y;
-            double difftheta = desired_pos_.theta - current_pos_.theta;
+            //im not sure if i need to account for the theta difference in real robot calculations...
+            
+            //double difftheta = desired_pos_.theta - current_pos_.theta;
             double distance = sqrt(diffx * diffx + diffy * diffy);
             double angle = atan2(diffy, diffx);
 
@@ -155,6 +163,38 @@ private:
                 cmd_vel.linear.x = 0;
                 cmd_vel.angular.z = 0;  
                 publisher_->publish(cmd_vel);
+                double final_error = atan2(sin(desired_pos_.theta - current_pos_.theta), cos(desired_pos_.theta - current_pos_.theta));
+
+
+
+                while(std::fabs(final_error) > 0.05)
+                {
+                
+//
+
+                        if (goal_handle->is_canceling()) {
+                            cmd_vel.linear.x = 0.0;
+                            cmd_vel.angular.z = 0.0;
+                            publisher_->publish(cmd_vel);
+                            result->status = false;
+                            goal_handle->canceled(result);
+                            break;  
+                        }
+
+                        cmd_vel.linear.x = 0.0;
+                        cmd_vel.angular.z = 0.4 * final_error; // rotate in place
+                        publisher_->publish(cmd_vel);
+
+                        loop_rate.sleep();
+                        final_error = atan2(sin(desired_pos_.theta - current_pos_.theta), cos(desired_pos_.theta - current_pos_.theta));
+
+                }
+
+
+                cmd_vel.linear.x = 0;
+                cmd_vel.angular.z = 0;
+                publisher_->publish(cmd_vel);
+                RCLCPP_INFO(this->get_logger(), "Action Complete");
                 result->status = true;
                 goal_handle->succeed(result);
 
@@ -168,6 +208,8 @@ private:
             cmd_vel.linear.x = 0.2;
             cmd_vel.angular.z = angle - current_pos_.theta;  
             publisher_->publish(cmd_vel);
+
+           
 
 
     

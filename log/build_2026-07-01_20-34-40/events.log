@@ -1,0 +1,447 @@
+[0.000000] (-) TimerEvent: {}
+[0.000558] (custom_interfaces) JobQueued: {'identifier': 'custom_interfaces', 'dependencies': OrderedDict()}
+[0.000912] (robot_patrol) JobQueued: {'identifier': 'robot_patrol', 'dependencies': OrderedDict([('custom_interfaces', '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces')])}
+[0.001268] (custom_interfaces) JobStarted: {'identifier': 'custom_interfaces'}
+[0.012805] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'cmake'}
+[0.013496] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'build'}
+[0.014288] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/user/ros2_ws/src/citylab_project/build/custom_interfaces', '--', '-j8', '-l8'], 'cwd': '/home/user/ros2_ws/src/citylab_project/build/custom_interfaces', 'env': OrderedDict([('ROS_VERSION', '2'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('GAZEBO_MASTER_URI', 'http://1_xterm:11345'), ('ROS_PYTHON_VERSION', '3'), ('HOSTNAME', '1_xterm'), ('ROBOT_HOSTNAME', ''), ('PWD', '/home/user/ros2_ws/src/citylab_project/build/custom_interfaces'), ('PORT', '4000'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('ROS_IP', ''), ('HOME', '/home/user'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('LANG', 'en_US.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description:/home/simulations/ros2_sims_ws/install/robot_description'), ('CMAKE_PREFIX_PATH', '/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo'), ('COLCON_PREFIX_PATH', '/home/user/ros2_ws/install:/home/simulations/ros2_sims_ws/install'), ('GAZEBO_MASTER_PORT', '11345'), ('NVM_DIR', '/usr/local/share/shell/.nvm'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PYTHONPATH', '/home/user/ros2_ws/install/robot_patrol/local/lib/python3.10/dist-packages:/home/user/ros2_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/simulations/public_sim_ws/src/all/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/all/kinematics_course_utils/kinematics'), ('COLCON', '1'), ('TERM', 'xterm-color'), ('ROBOT_DESCRIPTION_PATH', '/home/simulations/ros2_sims_ws/install/robot_description'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('SNAPCRAFT_BUILD_ENVIRONMENT', 'host'), ('GAZEBO_MASTER_HOSTNAME', '1_xterm'), ('DISPLAY', ':1'), ('SHLVL', '2'), ('NVM_CD_FLAGS', ''), ('ROS_MASTER_URI', 'http://1_simulation:11311'), ('ROS_HOSTNAME', '1_xterm'), ('LD_LIBRARY_PATH', '/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/user/ros2_ws/install/robot_patrol/lib:/home/user/ros2_ws/install/custom_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('ROS_LOCALHOST_ONLY', '0'), ('SLOT_SHELL_START_ID', '1032084'), ('SLOT_PREFIX', 'afcd6819-a36c-4ded-8d99-86885a9bf9ab'), ('LC_ALL', 'C'), ('SOURCE_ROS1_WS', ''), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-9/models:/usr/share/gazebo/models_robox'), ('SLOT_JENKINS_PORT', '25229'), ('SLOT_SYSTEMD', 'False'), ('PATH', '/opt/ros/humble/bin:/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.cargo/bin:/home/user/.cargo/bin'), ('SELECTED_ROS_DISTRO', 'humble'), ('NVM_BIN', '/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin'), ('NODE_VERSION', 'v8.17.0'), ('DEBIAN_FRONTEND', 'noninteractive'), ('ROS_DISTRO', 'humble'), ('GAZEBO_VERBOSE', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('OLDPWD', '/home/user/ros2_ws/src'), ('SOURCE_ROS2_WS', 'True'), ('SLOT_ROSBRIDGE_PORT', '20001'), ('_', '/usr/bin/env')]), 'shell': False}
+[0.070644] (custom_interfaces) StdoutLine: {'line': b'[  3%] Built target custom_interfaces__cpp\n'}
+[0.072354] (custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target custom_interfaces__rosidl_generator_c\n'}
+[0.080357] (custom_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_custom_interfaces\n'}
+[0.099409] (-) TimerEvent: {}
+[0.100978] (custom_interfaces) StdoutLine: {'line': b'[ 22%] Built target custom_interfaces__rosidl_typesupport_cpp\n'}
+[0.102233] (custom_interfaces) StdoutLine: {'line': b'[ 32%] Built target custom_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.103390] (custom_interfaces) StdoutLine: {'line': b'[ 41%] Built target custom_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.104239] (custom_interfaces) StdoutLine: {'line': b'[ 51%] Built target custom_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.105315] (custom_interfaces) StdoutLine: {'line': b'[ 61%] Built target custom_interfaces__rosidl_typesupport_c\n'}
+[0.107854] (custom_interfaces) StdoutLine: {'line': b'[ 70%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.127788] (custom_interfaces) StdoutLine: {'line': b'[ 70%] Built target custom_interfaces\n'}
+[0.151591] (custom_interfaces) StdoutLine: {'line': b'[ 74%] Built target custom_interfaces__py\n'}
+[0.172632] (custom_interfaces) StdoutLine: {'line': b'[ 80%] Built target custom_interfaces__rosidl_generator_py\n'}
+[0.198773] (custom_interfaces) StdoutLine: {'line': b'[ 87%] Built target custom_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.199021] (custom_interfaces) StdoutLine: {'line': b'[ 93%] Built target custom_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.199468] (-) TimerEvent: {}
+[0.200951] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target custom_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.299587] (-) TimerEvent: {}
+[0.327759] (custom_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.346974] (custom_interfaces) StdoutLine: {'line': b'writing custom_interfaces.egg-info/PKG-INFO\n'}
+[0.347970] (custom_interfaces) StdoutLine: {'line': b'writing dependency_links to custom_interfaces.egg-info/dependency_links.txt\n'}
+[0.348309] (custom_interfaces) StdoutLine: {'line': b'writing top-level names to custom_interfaces.egg-info/top_level.txt\n'}
+[0.399689] (-) TimerEvent: {}
+[0.404693] (custom_interfaces) StdoutLine: {'line': b"reading manifest file 'custom_interfaces.egg-info/SOURCES.txt'\n"}
+[0.405757] (custom_interfaces) StdoutLine: {'line': b"writing manifest file 'custom_interfaces.egg-info/SOURCES.txt'\n"}
+[0.441156] (custom_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_custom_interfaces_egg\n'}
+[0.452531] (custom_interfaces) CommandEnded: {'returncode': 0}
+[0.453335] (custom_interfaces) JobProgress: {'identifier': 'custom_interfaces', 'progress': 'install'}
+[0.462130] (custom_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/user/ros2_ws/src/citylab_project/build/custom_interfaces'], 'cwd': '/home/user/ros2_ws/src/citylab_project/build/custom_interfaces', 'env': OrderedDict([('ROS_VERSION', '2'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('GAZEBO_MASTER_URI', 'http://1_xterm:11345'), ('ROS_PYTHON_VERSION', '3'), ('HOSTNAME', '1_xterm'), ('ROBOT_HOSTNAME', ''), ('PWD', '/home/user/ros2_ws/src/citylab_project/build/custom_interfaces'), ('PORT', '4000'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('ROS_IP', ''), ('HOME', '/home/user'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('LANG', 'en_US.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description:/home/simulations/ros2_sims_ws/install/robot_description'), ('CMAKE_PREFIX_PATH', '/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo'), ('COLCON_PREFIX_PATH', '/home/user/ros2_ws/install:/home/simulations/ros2_sims_ws/install'), ('GAZEBO_MASTER_PORT', '11345'), ('NVM_DIR', '/usr/local/share/shell/.nvm'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PYTHONPATH', '/home/user/ros2_ws/install/robot_patrol/local/lib/python3.10/dist-packages:/home/user/ros2_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/simulations/public_sim_ws/src/all/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/all/kinematics_course_utils/kinematics'), ('COLCON', '1'), ('TERM', 'xterm-color'), ('ROBOT_DESCRIPTION_PATH', '/home/simulations/ros2_sims_ws/install/robot_description'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('SNAPCRAFT_BUILD_ENVIRONMENT', 'host'), ('GAZEBO_MASTER_HOSTNAME', '1_xterm'), ('DISPLAY', ':1'), ('SHLVL', '2'), ('NVM_CD_FLAGS', ''), ('ROS_MASTER_URI', 'http://1_simulation:11311'), ('ROS_HOSTNAME', '1_xterm'), ('LD_LIBRARY_PATH', '/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/user/ros2_ws/install/robot_patrol/lib:/home/user/ros2_ws/install/custom_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins::/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('ROS_LOCALHOST_ONLY', '0'), ('SLOT_SHELL_START_ID', '1032084'), ('SLOT_PREFIX', 'afcd6819-a36c-4ded-8d99-86885a9bf9ab'), ('LC_ALL', 'C'), ('SOURCE_ROS1_WS', ''), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-9/models:/usr/share/gazebo/models_robox'), ('SLOT_JENKINS_PORT', '25229'), ('SLOT_SYSTEMD', 'False'), ('PATH', '/opt/ros/humble/bin:/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.cargo/bin:/home/user/.cargo/bin'), ('SELECTED_ROS_DISTRO', 'humble'), ('NVM_BIN', '/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin'), ('NODE_VERSION', 'v8.17.0'), ('DEBIAN_FRONTEND', 'noninteractive'), ('ROS_DISTRO', 'humble'), ('GAZEBO_VERBOSE', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('OLDPWD', '/home/user/ros2_ws/src'), ('SOURCE_ROS2_WS', 'True'), ('SLOT_ROSBRIDGE_PORT', '20001'), ('_', '/usr/bin/env')]), 'shell': False}
+[0.470906] (custom_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.471100] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/custom_interfaces\n'}
+[0.471230] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[0.471370] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[0.471529] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[0.471601] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__functions.h\n'}
+[0.471670] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__functions.c\n'}
+[0.471766] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__struct.h\n'}
+[0.471831] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__type_support.h\n'}
+[0.471930] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/get_direction.h\n'}
+[0.472047] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[0.472134] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.472206] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/environment/library_path.sh\n'}
+[0.472297] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/environment/library_path.dsv\n'}
+[0.472361] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_c.so\n'}
+[0.472493] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[0.472590] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[0.472725] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[0.472831] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__rosidl_typesupport_fastrtps_c.h\n'}
+[0.472983] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[0.473109] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.473188] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.473284] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[0.473348] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[0.473463] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[0.473621] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__traits.hpp\n'}
+[0.473716] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__builder.hpp\n'}
+[0.473809] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__struct.hpp\n'}
+[0.473878] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__type_support.hpp\n'}
+[0.473944] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/get_direction.hpp\n'}
+[0.474010] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[0.474101] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.474190] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[0.474301] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[0.474412] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[0.474479] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.474574] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/dds_fastrtps\n'}
+[0.474641] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[0.474711] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.475325] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.475452] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[0.475548] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[0.475616] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[0.475684] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__type_support.c\n'}
+[0.475774] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__rosidl_typesupport_introspection_c.h\n'}
+[0.475839] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg\n'}
+[0.475931] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.476023] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.476094] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_c.so\n'}
+[0.476161] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces\n'}
+[0.476298] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv\n'}
+[0.476433] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail\n'}
+[0.476565] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__type_support.cpp\n'}
+[0.476660] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/include/custom_interfaces/custom_interfaces/srv/detail/get_direction__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.476727] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.476793] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib/libcustom_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.476873] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.sh\n'}
+[0.476969] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/environment/pythonpath.dsv\n'}
+[0.477051] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info\n'}
+[0.477119] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.477186] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.477252] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.477317] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.477383] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces\n'}
+[0.477452] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/srv\n'}
+[0.477518] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/srv/_get_direction.py\n'}
+[0.477584] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/srv/__init__.py\n'}
+[0.477651] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/srv/_get_direction_s.c\n'}
+[0.477717] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.477784] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.477854] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/libcustom_interfaces__rosidl_generator_py.so\n'}
+[0.477920] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[0.477986] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/__init__.py\n'}
+[0.478052] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.478153] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.478224] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.499781] (-) TimerEvent: {}
+[0.509747] (custom_interfaces) StdoutLine: {'line': b"Listing '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces'...\n"}
+[0.509927] (custom_interfaces) StdoutLine: {'line': b"Listing '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/srv'...\n"}
+[0.514779] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.515047] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.515340] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages/custom_interfaces/custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.515626] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib/libcustom_interfaces__rosidl_generator_py.so\n'}
+[0.515824] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/srv/GetDirection.idl\n'}
+[0.515946] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/srv/GetDirection.srv\n'}
+[0.516042] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/srv/GetDirection_Request.msg\n'}
+[0.516147] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/srv/GetDirection_Response.msg\n'}
+[0.516263] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/ament_index/resource_index/package_run_dependencies/custom_interfaces\n'}
+[0.516368] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/ament_index/resource_index/parent_prefix_path/custom_interfaces\n'}
+[0.516460] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.sh\n'}
+[0.516543] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.516642] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/environment/path.sh\n'}
+[0.516746] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/environment/path.dsv\n'}
+[0.516800] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/local_setup.bash\n'}
+[0.516855] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/local_setup.sh\n'}
+[0.516940] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/local_setup.zsh\n'}
+[0.517013] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/local_setup.dsv\n'}
+[0.517084] (custom_interfaces) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/package.dsv\n'}
+[0.517184] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/ament_index/resource_index/packages/custom_interfaces\n'}
+[0.517249] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.517329] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.517466] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.517540] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.517622] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.517742] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.517836] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.517901] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.517982] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.518111] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.518209] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.518273] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.518390] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.518482] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.518615] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.518731] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport.cmake\n'}
+[0.518985] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/export_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.519169] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.519244] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.519311] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.519379] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.519442] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.519506] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.519569] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.519631] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig.cmake\n'}
+[0.519693] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/cmake/custom_interfacesConfig-version.cmake\n'}
+[0.519754] (custom_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/custom_interfaces/share/custom_interfaces/package.xml\n'}
+[0.521854] (custom_interfaces) CommandEnded: {'returncode': 0}
+[0.544252] (custom_interfaces) JobEnded: {'identifier': 'custom_interfaces', 'rc': 0}
+[0.545269] (robot_patrol) JobStarted: {'identifier': 'robot_patrol'}
+[0.556316] (robot_patrol) JobProgress: {'identifier': 'robot_patrol', 'progress': 'cmake'}
+[0.556954] (robot_patrol) JobProgress: {'identifier': 'robot_patrol', 'progress': 'build'}
+[0.558214] (robot_patrol) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/user/ros2_ws/src/citylab_project/build/robot_patrol', '--', '-j8', '-l8'], 'cwd': '/home/user/ros2_ws/src/citylab_project/build/robot_patrol', 'env': OrderedDict([('ROS_VERSION', '2'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('GAZEBO_MASTER_URI', 'http://1_xterm:11345'), ('ROS_PYTHON_VERSION', '3'), ('HOSTNAME', '1_xterm'), ('ROBOT_HOSTNAME', ''), ('PWD', '/home/user/ros2_ws/src/citylab_project/build/robot_patrol'), ('PORT', '4000'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('ROS_IP', ''), ('HOME', '/home/user'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('LANG', 'en_US.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description:/home/simulations/ros2_sims_ws/install/robot_description'), ('CMAKE_PREFIX_PATH', '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo'), ('COLCON_PREFIX_PATH', '/home/user/ros2_ws/install:/home/simulations/ros2_sims_ws/install'), ('GAZEBO_MASTER_PORT', '11345'), ('NVM_DIR', '/usr/local/share/shell/.nvm'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PYTHONPATH', '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages:/home/user/ros2_ws/install/robot_patrol/local/lib/python3.10/dist-packages:/home/user/ros2_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/simulations/public_sim_ws/src/all/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/all/kinematics_course_utils/kinematics'), ('COLCON', '1'), ('TERM', 'xterm-color'), ('ROBOT_DESCRIPTION_PATH', '/home/simulations/ros2_sims_ws/install/robot_description'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('SNAPCRAFT_BUILD_ENVIRONMENT', 'host'), ('GAZEBO_MASTER_HOSTNAME', '1_xterm'), ('DISPLAY', ':1'), ('SHLVL', '2'), ('NVM_CD_FLAGS', ''), ('ROS_MASTER_URI', 'http://1_simulation:11311'), ('ROS_HOSTNAME', '1_xterm'), ('LD_LIBRARY_PATH', '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/user/ros2_ws/install/robot_patrol/lib:/home/user/ros2_ws/install/custom_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('ROS_LOCALHOST_ONLY', '0'), ('SLOT_SHELL_START_ID', '1032084'), ('SLOT_PREFIX', 'afcd6819-a36c-4ded-8d99-86885a9bf9ab'), ('LC_ALL', 'C'), ('SOURCE_ROS1_WS', ''), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-9/models:/usr/share/gazebo/models_robox'), ('SLOT_JENKINS_PORT', '25229'), ('SLOT_SYSTEMD', 'False'), ('PATH', '/opt/ros/humble/bin:/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.cargo/bin:/home/user/.cargo/bin'), ('SELECTED_ROS_DISTRO', 'humble'), ('NVM_BIN', '/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin'), ('NODE_VERSION', 'v8.17.0'), ('DEBIAN_FRONTEND', 'noninteractive'), ('ROS_DISTRO', 'humble'), ('GAZEBO_VERBOSE', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('OLDPWD', '/home/user/ros2_ws/src'), ('SOURCE_ROS2_WS', 'True'), ('SLOT_ROSBRIDGE_PORT', '20001'), ('_', '/usr/bin/env')]), 'shell': False}
+[0.599928] (-) TimerEvent: {}
+[0.608766] (robot_patrol) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target direction_service\x1b[0m\n'}
+[0.620311] (robot_patrol) StdoutLine: {'line': b'[  2%] Built target robot_patrol__cpp\n'}
+[0.623612] (robot_patrol) StdoutLine: {'line': b'[  9%] Built target robot_patrol__rosidl_generator_c\n'}
+[0.627207] (robot_patrol) StdoutLine: {'line': b'[ 14%] Built target robot_patrol_executable\n'}
+[0.627858] (robot_patrol) StdoutLine: {'line': b'[ 19%] Built target test_service\n'}
+[0.631068] (robot_patrol) StdoutLine: {'line': b'[ 19%] Built target ament_cmake_python_copy_robot_patrol\n'}
+[0.631307] (robot_patrol) StdoutLine: {'line': b'[ 24%] Built target robot_patrol_executable2\n'}
+[0.636939] (robot_patrol) StdoutLine: {'line': b'[ 29%] Built target direction_service\n'}
+[0.651230] (robot_patrol) StdoutLine: {'line': b'[ 36%] Built target robot_patrol__rosidl_typesupport_cpp\n'}
+[0.658688] (robot_patrol) StdoutLine: {'line': b'[ 43%] Built target robot_patrol__rosidl_typesupport_fastrtps_cpp\n'}
+[0.660460] (robot_patrol) StdoutLine: {'line': b'[ 51%] Built target robot_patrol__rosidl_typesupport_introspection_c\n'}
+[0.660813] (robot_patrol) StdoutLine: {'line': b'[ 58%] Built target robot_patrol__rosidl_typesupport_introspection_cpp\n'}
+[0.664016] (robot_patrol) StdoutLine: {'line': b'[ 65%] Built target robot_patrol__rosidl_typesupport_c\n'}
+[0.666152] (robot_patrol) StdoutLine: {'line': b'[ 73%] Built target robot_patrol__rosidl_typesupport_fastrtps_c\n'}
+[0.686212] (robot_patrol) StdoutLine: {'line': b'[ 73%] Built target robot_patrol\n'}
+[0.700034] (-) TimerEvent: {}
+[0.701823] (robot_patrol) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target action_service\x1b[0m\n'}
+[0.711071] (robot_patrol) StdoutLine: {'line': b'[ 75%] Built target robot_patrol__py\n'}
+[0.729090] (robot_patrol) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/action_service.dir/src/go_to_pose_action.cpp.o\x1b[0m\n'}
+[0.736902] (robot_patrol) StdoutLine: {'line': b'[ 82%] Built target robot_patrol__rosidl_generator_py\n'}
+[0.763701] (robot_patrol) StdoutLine: {'line': b'[ 87%] Built target robot_patrol__rosidl_typesupport_c__pyext\n'}
+[0.766789] (robot_patrol) StdoutLine: {'line': b'[ 97%] Built target robot_patrol__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.767028] (robot_patrol) StdoutLine: {'line': b'[ 97%] Built target robot_patrol__rosidl_typesupport_introspection_c__pyext\n'}
+[0.800136] (-) TimerEvent: {}
+[0.893236] (robot_patrol) StdoutLine: {'line': b'running egg_info\n'}
+[0.900238] (-) TimerEvent: {}
+[0.913937] (robot_patrol) StdoutLine: {'line': b'writing robot_patrol.egg-info/PKG-INFO\n'}
+[0.914444] (robot_patrol) StdoutLine: {'line': b'writing dependency_links to robot_patrol.egg-info/dependency_links.txt\n'}
+[0.914754] (robot_patrol) StdoutLine: {'line': b'writing top-level names to robot_patrol.egg-info/top_level.txt\n'}
+[0.978833] (robot_patrol) StdoutLine: {'line': b"reading manifest file 'robot_patrol.egg-info/SOURCES.txt'\n"}
+[0.979936] (robot_patrol) StdoutLine: {'line': b"writing manifest file 'robot_patrol.egg-info/SOURCES.txt'\n"}
+[1.000362] (-) TimerEvent: {}
+[1.020322] (robot_patrol) StdoutLine: {'line': b'[ 97%] Built target ament_cmake_python_build_robot_patrol_egg\n'}
+[1.100502] (-) TimerEvent: {}
+[1.200872] (-) TimerEvent: {}
+[1.301198] (-) TimerEvent: {}
+[1.401541] (-) TimerEvent: {}
+[1.501890] (-) TimerEvent: {}
+[1.602287] (-) TimerEvent: {}
+[1.702612] (-) TimerEvent: {}
+[1.802941] (-) TimerEvent: {}
+[1.903316] (-) TimerEvent: {}
+[2.003732] (-) TimerEvent: {}
+[2.104071] (-) TimerEvent: {}
+[2.204398] (-) TimerEvent: {}
+[2.304727] (-) TimerEvent: {}
+[2.405068] (-) TimerEvent: {}
+[2.505405] (-) TimerEvent: {}
+[2.605729] (-) TimerEvent: {}
+[2.706082] (-) TimerEvent: {}
+[2.806609] (-) TimerEvent: {}
+[2.906936] (-) TimerEvent: {}
+[3.007282] (-) TimerEvent: {}
+[3.107607] (-) TimerEvent: {}
+[3.207965] (-) TimerEvent: {}
+[3.308275] (-) TimerEvent: {}
+[3.408594] (-) TimerEvent: {}
+[3.508921] (-) TimerEvent: {}
+[3.609247] (-) TimerEvent: {}
+[3.709563] (-) TimerEvent: {}
+[3.809901] (-) TimerEvent: {}
+[3.910252] (-) TimerEvent: {}
+[4.010571] (-) TimerEvent: {}
+[4.110923] (-) TimerEvent: {}
+[4.211733] (-) TimerEvent: {}
+[4.312080] (-) TimerEvent: {}
+[4.412747] (-) TimerEvent: {}
+[4.513077] (-) TimerEvent: {}
+[4.613378] (-) TimerEvent: {}
+[4.713678] (-) TimerEvent: {}
+[4.813977] (-) TimerEvent: {}
+[4.914301] (-) TimerEvent: {}
+[5.014654] (-) TimerEvent: {}
+[5.114961] (-) TimerEvent: {}
+[5.215280] (-) TimerEvent: {}
+[5.315586] (-) TimerEvent: {}
+[5.415892] (-) TimerEvent: {}
+[5.516185] (-) TimerEvent: {}
+[5.616480] (-) TimerEvent: {}
+[5.716775] (-) TimerEvent: {}
+[5.817074] (-) TimerEvent: {}
+[5.917375] (-) TimerEvent: {}
+[6.017777] (-) TimerEvent: {}
+[6.118084] (-) TimerEvent: {}
+[6.218411] (-) TimerEvent: {}
+[6.318710] (-) TimerEvent: {}
+[6.419015] (-) TimerEvent: {}
+[6.519315] (-) TimerEvent: {}
+[6.619620] (-) TimerEvent: {}
+[6.719922] (-) TimerEvent: {}
+[6.820225] (-) TimerEvent: {}
+[6.920514] (-) TimerEvent: {}
+[7.020808] (-) TimerEvent: {}
+[7.121135] (-) TimerEvent: {}
+[7.221432] (-) TimerEvent: {}
+[7.321726] (-) TimerEvent: {}
+[7.422016] (-) TimerEvent: {}
+[7.522330] (-) TimerEvent: {}
+[7.622848] (-) TimerEvent: {}
+[7.723135] (-) TimerEvent: {}
+[7.823428] (-) TimerEvent: {}
+[7.923721] (-) TimerEvent: {}
+[8.024014] (-) TimerEvent: {}
+[8.124298] (-) TimerEvent: {}
+[8.224581] (-) TimerEvent: {}
+[8.324863] (-) TimerEvent: {}
+[8.425382] (-) TimerEvent: {}
+[8.525667] (-) TimerEvent: {}
+[8.625955] (-) TimerEvent: {}
+[8.726263] (-) TimerEvent: {}
+[8.826554] (-) TimerEvent: {}
+[8.926845] (-) TimerEvent: {}
+[9.027140] (-) TimerEvent: {}
+[9.127436] (-) TimerEvent: {}
+[9.227889] (-) TimerEvent: {}
+[9.328269] (-) TimerEvent: {}
+[9.428659] (-) TimerEvent: {}
+[9.529048] (-) TimerEvent: {}
+[9.629420] (-) TimerEvent: {}
+[9.730355] (-) TimerEvent: {}
+[9.830739] (-) TimerEvent: {}
+[9.931103] (-) TimerEvent: {}
+[10.031442] (-) TimerEvent: {}
+[10.131740] (-) TimerEvent: {}
+[10.232038] (-) TimerEvent: {}
+[10.332338] (-) TimerEvent: {}
+[10.432643] (-) TimerEvent: {}
+[10.532653] (robot_patrol) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable action_service\x1b[0m\n'}
+[10.532872] (-) TimerEvent: {}
+[10.633103] (-) TimerEvent: {}
+[10.733403] (-) TimerEvent: {}
+[10.833703] (-) TimerEvent: {}
+[10.922853] (robot_patrol) StdoutLine: {'line': b'[100%] Built target action_service\n'}
+[10.933237] (robot_patrol) CommandEnded: {'returncode': 0}
+[10.933902] (-) TimerEvent: {}
+[10.934303] (robot_patrol) JobProgress: {'identifier': 'robot_patrol', 'progress': 'install'}
+[10.934923] (robot_patrol) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/user/ros2_ws/src/citylab_project/build/robot_patrol'], 'cwd': '/home/user/ros2_ws/src/citylab_project/build/robot_patrol', 'env': OrderedDict([('ROS_VERSION', '2'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('GAZEBO_MASTER_URI', 'http://1_xterm:11345'), ('ROS_PYTHON_VERSION', '3'), ('HOSTNAME', '1_xterm'), ('ROBOT_HOSTNAME', ''), ('PWD', '/home/user/ros2_ws/src/citylab_project/build/robot_patrol'), ('PORT', '4000'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('ROS_IP', ''), ('HOME', '/home/user'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('LANG', 'en_US.UTF-8'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description:/home/simulations/ros2_sims_ws/install/robot_description'), ('CMAKE_PREFIX_PATH', '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces:/home/user/ros2_ws/install/robot_patrol:/home/user/ros2_ws/install/custom_interfaces:/opt/ros/humble:/home/simulations/ros2_sims_ws/install/robot_description'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo'), ('COLCON_PREFIX_PATH', '/home/user/ros2_ws/install:/home/simulations/ros2_sims_ws/install'), ('GAZEBO_MASTER_PORT', '11345'), ('NVM_DIR', '/usr/local/share/shell/.nvm'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PYTHONPATH', '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/local/lib/python3.10/dist-packages:/home/user/ros2_ws/install/robot_patrol/local/lib/python3.10/dist-packages:/home/user/ros2_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/simulations/public_sim_ws/src/all/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/ros_basics_examples/python_course_class:/home/simulations/public_sim_ws/src/all/kinematics_course_utils/kinematics'), ('COLCON', '1'), ('TERM', 'xterm-color'), ('ROBOT_DESCRIPTION_PATH', '/home/simulations/ros2_sims_ws/install/robot_description'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('SNAPCRAFT_BUILD_ENVIRONMENT', 'host'), ('GAZEBO_MASTER_HOSTNAME', '1_xterm'), ('DISPLAY', ':1'), ('SHLVL', '2'), ('NVM_CD_FLAGS', ''), ('ROS_MASTER_URI', 'http://1_simulation:11311'), ('ROS_HOSTNAME', '1_xterm'), ('LD_LIBRARY_PATH', '/home/user/ros2_ws/src/citylab_project/install/custom_interfaces/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/user/ros2_ws/install/robot_patrol/lib:/home/user/ros2_ws/install/custom_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('ROS_LOCALHOST_ONLY', '0'), ('SLOT_SHELL_START_ID', '1032084'), ('SLOT_PREFIX', 'afcd6819-a36c-4ded-8d99-86885a9bf9ab'), ('LC_ALL', 'C'), ('SOURCE_ROS1_WS', ''), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-9/models:/usr/share/gazebo/models_robox'), ('SLOT_JENKINS_PORT', '25229'), ('SLOT_SYSTEMD', 'False'), ('PATH', '/opt/ros/humble/bin:/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.cargo/bin:/home/user/.cargo/bin'), ('SELECTED_ROS_DISTRO', 'humble'), ('NVM_BIN', '/usr/local/share/shell/.nvm/versions/node/v8.17.0/bin'), ('NODE_VERSION', 'v8.17.0'), ('DEBIAN_FRONTEND', 'noninteractive'), ('ROS_DISTRO', 'humble'), ('GAZEBO_VERBOSE', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('OLDPWD', '/home/user/ros2_ws/src'), ('SOURCE_ROS2_WS', 'True'), ('SLOT_ROSBRIDGE_PORT', '20001'), ('_', '/usr/bin/env')]), 'shell': False}
+[10.943192] (robot_patrol) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.943409] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/robot_patrol_executable\n'}
+[10.944072] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/robot_patrol_executable2\n'}
+[10.944203] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/direction_service\n'}
+[10.944354] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/test_service\n'}
+[10.944513] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/action_service\n'}
+[10.950120] (robot_patrol) StdoutLine: {'line': b'-- Set runtime path of "/home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/robot_patrol/action_service" to ""\n'}
+[10.950408] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/rosidl_interfaces/robot_patrol\n'}
+[10.950657] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol\n'}
+[10.950820] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg\n'}
+[10.950924] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg/rosidl_generator_c__visibility_control.h\n'}
+[10.951065] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action\n'}
+[10.951230] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail\n'}
+[10.951397] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__type_support.h\n'}
+[10.951517] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__struct.h\n'}
+[10.951689] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__functions.c\n'}
+[10.951886] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__functions.h\n'}
+[10.952103] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/go_to_pose.h\n'}
+[10.952605] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/library_path.sh\n'}
+[10.952767] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/library_path.dsv\n'}
+[10.952893] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/librobot_patrol__rosidl_generator_c.so\n'}
+[10.953077] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol\n'}
+[10.953195] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg\n'}
+[10.953338] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[10.953491] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action\n'}
+[10.953683] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail\n'}
+[10.953795] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[10.953911] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/librobot_patrol__rosidl_typesupport_fastrtps_c.so\n'}
+[10.954021] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol\n'}
+[10.954249] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg\n'}
+[10.954411] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[10.954591] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action\n'}
+[10.954698] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail\n'}
+[10.954835] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__traits.hpp\n'}
+[10.954945] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__builder.hpp\n'}
+[10.955083] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__type_support.hpp\n'}
+[10.955232] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__struct.hpp\n'}
+[10.955395] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/go_to_pose.hpp\n'}
+[10.955488] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol\n'}
+[10.955614] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg\n'}
+[10.955740] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[10.955843] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action\n'}
+[10.955984] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail\n'}
+[10.956118] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.956297] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/dds_fastrtps\n'}
+[10.956479] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/librobot_patrol__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.956614] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol\n'}
+[10.956723] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg\n'}
+[10.956837] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[10.956946] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action\n'}
+[10.957061] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail\n'}
+[10.957178] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__type_support.c\n'}
+[10.957285] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__rosidl_typesupport_introspection_c.h\n'}
+[10.957393] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/librobot_patrol__rosidl_typesupport_introspection_c.so\n'}
+[10.957499] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/librobot_patrol__rosidl_typesupport_c.so\n'}
+[10.957606] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol\n'}
+[10.957711] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action\n'}
+[10.957817] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail\n'}
+[10.957928] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.958034] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/include/robot_patrol/robot_patrol/action/detail/go_to_pose__type_support.cpp\n'}
+[10.958169] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/librobot_patrol__rosidl_typesupport_introspection_cpp.so\n'}
+[10.958282] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/librobot_patrol__rosidl_typesupport_cpp.so\n'}
+[10.958389] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/pythonpath.sh\n'}
+[10.958494] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/pythonpath.dsv\n'}
+[10.958600] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol-0.0.0-py3.10.egg-info\n'}
+[10.958706] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[10.958813] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[10.958920] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[10.959027] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[10.959134] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol\n'}
+[10.959240] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/_robot_patrol_s.ep.rosidl_typesupport_c.c\n'}
+[10.959347] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/_robot_patrol_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[10.959456] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/librobot_patrol__rosidl_generator_py.so\n'}
+[10.959564] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/__init__.py\n'}
+[10.959670] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/robot_patrol_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.959798] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/robot_patrol_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.959874] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/_robot_patrol_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[10.959931] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/action\n'}
+[10.959982] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/action/_go_to_pose_s.c\n'}
+[10.960038] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/action/__init__.py\n'}
+[10.960087] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/action/_go_to_pose.py\n'}
+[10.960135] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/robot_patrol_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.992088] (robot_patrol) StdoutLine: {'line': b"Listing '/home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol'...\n"}
+[10.992258] (robot_patrol) StdoutLine: {'line': b"Listing '/home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/action'...\n"}
+[10.996249] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/robot_patrol_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.996522] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/robot_patrol_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.996818] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/local/lib/python3.10/dist-packages/robot_patrol/robot_patrol_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[10.997100] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/lib/librobot_patrol__rosidl_generator_py.so\n'}
+[10.997758] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/action/GoToPose.idl\n'}
+[10.997949] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/action/GoToPose.action\n'}
+[10.998076] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch\n'}
+[10.998248] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/main.launch.py\n'}
+[10.998360] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_direction_service.launch.py\n'}
+[10.998490] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_gotopose_action.launch.py\n'}
+[10.998612] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_test_service.launch.py\n'}
+[10.998735] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/launch/start_patrolling.launch.py\n'}
+[10.998880] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/rivz\n'}
+[10.998991] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/rivz/virtualrvizconfig.rviz\n'}
+[10.999085] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/rivz/realvizconfig.rviz\n'}
+[10.999192] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/package_run_dependencies/robot_patrol\n'}
+[10.999349] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/parent_prefix_path/robot_patrol\n'}
+[10.999458] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.sh\n'}
+[10.999582] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.dsv\n'}
+[10.999685] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/path.sh\n'}
+[10.999781] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/environment/path.dsv\n'}
+[10.999985] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.bash\n'}
+[11.000125] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.sh\n'}
+[11.000231] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.zsh\n'}
+[11.000363] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/local_setup.dsv\n'}
+[11.000521] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/package.dsv\n'}
+[11.000627] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/ament_index/resource_index/packages/robot_patrol\n'}
+[11.000775] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/export_robot_patrol__rosidl_generator_cExport.cmake\n'}
+[11.000859] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/export_robot_patrol__rosidl_generator_cExport-noconfig.cmake\n'}
+[11.001038] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/export_robot_patrol__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.001168] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/export_robot_patrol__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[11.001255] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/export_robot_patrol__rosidl_generator_cppExport.cmake\n'}
+[11.001337] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/export_robot_patrol__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.001417] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/export_robot_patrol__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[11.001558] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrol__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.001623] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrol__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[11.001690] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrol__rosidl_typesupport_cExport.cmake\n'}
+[11.001752] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrol__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[11.001812] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrol__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.001873] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrol__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[11.001933] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrol__rosidl_typesupport_cppExport.cmake\n'}
+[11.001993] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrol__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[11.002054] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/export_robot_patrol__rosidl_generator_pyExport.cmake\n'}
+[11.002138] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/export_robot_patrol__rosidl_generator_pyExport-noconfig.cmake\n'}
+[11.002211] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/rosidl_cmake-extras.cmake\n'}
+[11.002271] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.002332] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.002394] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.002455] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.002516] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[11.002622] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[11.002991] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig.cmake\n'}
+[11.003346] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig-version.cmake\n'}
+[11.004012] (robot_patrol) StdoutLine: {'line': b'-- Up-to-date: /home/user/ros2_ws/src/citylab_project/install/robot_patrol/share/robot_patrol/package.xml\n'}
+[11.004314] (robot_patrol) CommandEnded: {'returncode': 0}
+[11.020675] (robot_patrol) JobEnded: {'identifier': 'robot_patrol', 'rc': 0}
+[11.021532] (-) EventReactorShutdown: {}

@@ -14,7 +14,7 @@ public:
         auto qos = rclcpp::QoS(10).reliability(rclcpp::ReliabilityPolicy::Reliable);
 
         laser_subscriber_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
-            "/fastbot_1/scan", qos,
+            "/scan", qos,
             std::bind(&DirectionClient::send_callback, this, std::placeholders::_1));
 
         client_ = this->create_client<custom_interfaces::srv::GetDirection>("/direction_service");

@@ -32,8 +32,8 @@ private:
   std::shared_ptr<custom_interfaces::srv::GetDirection::Response> response)
     {
     
-    //RCLCPP_INFO(this->get_logger(), "Service Requested");
-    float test = request->laser_data.scan_time;
+    RCLCPP_INFO(this->get_logger(), "Service Requested");
+    //float test = request->laser_data.scan_time;
 
     float ci = (0.0 - request->laser_data.angle_min) / request->laser_data.angle_increment;
     float start = ci - (M_PI/2) / request->laser_data.angle_increment;       //49.75
@@ -63,7 +63,7 @@ private:
     //83 and 116???
     
 
-    RCLCPP_INFO(this->get_logger(), "ranges is %f", request->laser_data.ranges);
+    //RCLCPP_INFO(this->get_logger(), "ranges is %f", request->laser_data.ranges);
    
     //right 
     for(int i = 337; i < 411; i++)
@@ -96,7 +96,7 @@ private:
         
         }
 
-    float FRONT_THRESHOLD = 1;
+    float FRONT_THRESHOLD = 0.3;
     if(total_dist_sec_right > total_dist_sec_front && total_dist_sec_right >  total_dist_sec_left)
     {
         if(FRONT_THRESHOLD < total_dist_sec_right)
@@ -129,7 +129,7 @@ private:
     //std::cout << "left is " << total_dist_sec_left;
     //RCLCPP_INFO(this->get_logger(), "start=%f, step=%d rightend=%d frontend=%d leftend=%d", start, step, rightend, frontend, leftend);
 
-    RCLCPP_INFO(this->get_logger(), "total right=%d total front=%d total left=%d", total_dist_sec_right, total_dist_sec_front, total_dist_sec_left);
+    //RCLCPP_INFO(this->get_logger(), "total right=%f total front=%f total left=%f", total_dist_sec_right, total_dist_sec_front, total_dist_sec_left);
     
     std::stringstream ss;
     ss << std::fixed << std::setprecision(2);
@@ -142,7 +142,7 @@ private:
     response->info = ss.str();
     response->direction = direction;
     
-    //RCLCPP_INFO(this->get_logger(), "Service Complete");
+    RCLCPP_INFO(this->get_logger(), "Service Complete");
     
     }
     

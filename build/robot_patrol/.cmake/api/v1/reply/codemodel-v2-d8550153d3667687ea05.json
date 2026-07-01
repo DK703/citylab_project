@@ -1,0 +1,278 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-c3c6ed3b33f9096a16d6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					]
+				},
+				{
+					"build" : "robot_patrol__py",
+					"jsonFile" : "directory-robot_patrol__py-2c456280e5a668503582.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/user/ros2_ws/src/citylab_project/build/robot_patrol/robot_patrol__py",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "robot_patrol",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "action_service::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-action_service-68238e476be562971445.json",
+					"name" : "action_service",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_robot_patrol_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_robot_patrol_egg-3b716e88749ad07761ab.json",
+					"name" : "ament_cmake_python_build_robot_patrol_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_robot_patrol::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_robot_patrol-634628e0b2970d9b08e5.json",
+					"name" : "ament_cmake_python_copy_robot_patrol",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "direction_service::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-direction_service-5ea3ebeaa3169791364d.json",
+					"name" : "direction_service",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol-69d15dfca5a2750ee5d1.json",
+					"name" : "robot_patrol",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__cpp-3bed224bb75fd30e6e3e.json",
+					"name" : "robot_patrol__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "robot_patrol__py::@fe806e4176de440a7343",
+					"jsonFile" : "target-robot_patrol__py-edc3df809823f5e51204.json",
+					"name" : "robot_patrol__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_generator_c-a214e14d558bff2fd7f7.json",
+					"name" : "robot_patrol__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_generator_py-fa322aa51844acc6aeb9.json",
+					"name" : "robot_patrol__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_typesupport_c-fc6ae9dbbf606d735b9a.json",
+					"name" : "robot_patrol__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_typesupport_c__pyext-455d629d22750df750f8.json",
+					"name" : "robot_patrol__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_typesupport_cpp-49754d403f27497d27cf.json",
+					"name" : "robot_patrol__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_typesupport_fastrtps_c-6b1a673fe441b835dd9b.json",
+					"name" : "robot_patrol__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_typesupport_fastrtps_c__pyext-54c79595573987ac1cc3.json",
+					"name" : "robot_patrol__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_typesupport_fastrtps_cpp-673fc3b9fcb16924c85a.json",
+					"name" : "robot_patrol__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_typesupport_introspection_c-d0b027dd14ac23bc2fee.json",
+					"name" : "robot_patrol__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_typesupport_introspection_c__pyext-fea792e29ff8f5a4a211.json",
+					"name" : "robot_patrol__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol__rosidl_typesupport_introspection_cpp-418989d4d625307c14af.json",
+					"name" : "robot_patrol__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol_executable::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol_executable-b44783f90038ade4b784.json",
+					"name" : "robot_patrol_executable",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol_executable2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol_executable2-937390b1a48f016a688c.json",
+					"name" : "robot_patrol_executable2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "robot_patrol_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-robot_patrol_uninstall-4bd2f9167fc4d2393533.json",
+					"name" : "robot_patrol_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_service::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_service-273e2a0a63f349f7ec26.json",
+					"name" : "test_service",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-cc993b98e928775ea1c3.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/user/ros2_ws/src/citylab_project/build/robot_patrol",
+		"source" : "/home/user/ros2_ws/src/citylab_project/robot_patrol"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

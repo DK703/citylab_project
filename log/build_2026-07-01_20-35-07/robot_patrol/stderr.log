@@ -1,0 +1,90 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:1[m[K:
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:[m[K In member function '[01m[Kvoid DirectionService::get_direction_callback(std::shared_ptr<custom_interfaces::srv::GetDirection_Request_<std::allocator<void> > >, std::shared_ptr<custom_interfaces::srv::GetDirection_Response_<std::allocator<void> > >)[m[K':
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:66:37:[m[K [01;35m[Kwarning: [m[Kformat '[01m[K%f[m[K' expects argument of type '[01m[Kdouble[m[K', but argument 5 has type '[01m[Ksensor_msgs::msg::LaserScan_<std::allocator<void> >::_ranges_type[m[K' {aka '[01m[Kstd::vector<float>[m[K'} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   66 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"ranges is %f"[m[K, request->laser_data.ranges);
+      |                                     [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:66:49:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   66 |     RCLCPP_INFO(this->get_logger(), "ranges is [01;36m[K%f[m[K", request->laser_data.ranges);
+      |                                                [01;36m[K~^[m[K
+      |                                                 [01;36m[K|[m[K
+      |                                                 [01;36m[Kdouble[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:1[m[K:
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:132:37:[m[K [01;35m[Kwarning: [m[Kformat '[01m[K%d[m[K' expects argument of type '[01m[Kint[m[K', but argument 5 has type '[01m[Kdouble[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  132 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"total right=%d total front=%d total left=%d"[m[K, [32m[Ktotal_dist_sec_right[m[K, total_dist_sec_front, total_dist_sec_left);
+      |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                    [32m[K|[m[K
+      |                                                                                    [32m[Kdouble[m[K
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:132:51:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  132 |     RCLCPP_INFO(this->get_logger(), "total right=[01;36m[K%d[m[K total front=%d total left=%d", total_dist_sec_right, total_dist_sec_front, total_dist_sec_left);
+      |                                                  [01;36m[K~^[m[K
+      |                                                   [01;36m[K|[m[K
+      |                                                   [01;36m[Kint[m[K
+      |                                                  [32m[K%f[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:1[m[K:
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:132:37:[m[K [01;35m[Kwarning: [m[Kformat '[01m[K%d[m[K' expects argument of type '[01m[Kint[m[K', but argument 6 has type '[01m[Kdouble[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  132 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"total right=%d total front=%d total left=%d"[m[K, total_dist_sec_right, [32m[Ktotal_dist_sec_front[m[K, total_dist_sec_left);
+      |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                        [32m[K~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                                          [32m[K|[m[K
+      |                                                                                                          [32m[Kdouble[m[K
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:132:66:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  132 |     RCLCPP_INFO(this->get_logger(), "total right=%d total front=[01;36m[K%d[m[K total left=%d", total_dist_sec_right, total_dist_sec_front, total_dist_sec_left);
+      |                                                                 [01;36m[K~^[m[K
+      |                                                                  [01;36m[K|[m[K
+      |                                                                  [01;36m[Kint[m[K
+      |                                                                 [32m[K%f[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:1[m[K:
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:132:37:[m[K [01;35m[Kwarning: [m[Kformat '[01m[K%d[m[K' expects argument of type '[01m[Kint[m[K', but argument 7 has type '[01m[Kdouble[m[K' [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  132 |     RCLCPP_INFO(this->get_logger(), [01;35m[K"total right=%d total front=%d total left=%d"[m[K, total_dist_sec_right, total_dist_sec_front, [32m[Ktotal_dist_sec_left[m[K);
+      |                                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                                              [32m[K~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                                                                [32m[K|[m[K
+      |                                                                                                                                [32m[Kdouble[m[K
+[01m[K/home/user/ros2_ws/src/citylab_project/robot_patrol/src/direction_service.cpp:132:80:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  132 |     RCLCPP_INFO(this->get_logger(), "total right=%d total front=%d total left=[01;36m[K%d[m[K", total_dist_sec_right, total_dist_sec_front, total_dist_sec_left);
+      |                                                                               [01;36m[K~^[m[K
+      |                                                                                [01;36m[K|[m[K
+      |                                                                                [01;36m[Kint[m[K
+      |                                                                               [32m[K%f[m[K
