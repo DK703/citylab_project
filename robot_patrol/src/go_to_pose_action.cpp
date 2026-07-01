@@ -43,7 +43,7 @@ public:
             
         );
 
-
+        RCLCPP_INFO(this->get_logger(), "Action Server Ready");
         publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("/fastbot_1/cmd_vel", 10);
         }
     
@@ -84,6 +84,7 @@ private:
         //        goal->x, goal->y, goal->yaw);
         (void)uuid;
         RCLCPP_INFO(this->get_logger(), "Received goal request with values x is %f, y is %f, theta is %f", goal->goal_pos.x,  goal->goal_pos.y, goal->goal_pos.theta);
+         RCLCPP_INFO(this->get_logger(), "Action Called");
         return rclcpp_action::GoalResponse::ACCEPT_AND_EXECUTE;
     }
 
@@ -193,7 +194,7 @@ private:
                 cmd_vel.angular.z = 0;
                 publisher_->publish(cmd_vel);
 
-
+                RCLCPP_INFO(this->get_logger(), "Action Complete");
                 result->status = true;
                 goal_handle->succeed(result);
 

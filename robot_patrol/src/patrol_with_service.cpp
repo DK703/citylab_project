@@ -187,6 +187,7 @@ std::shared_ptr<PatrolNode> simple_publisher;
 
 void signal_handler(int signum)
 {
+    (void)signum;
     simple_publisher->stop_rover();
     rclcpp::shutdown();
 }
